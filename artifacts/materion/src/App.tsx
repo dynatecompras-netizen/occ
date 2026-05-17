@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 
 import Dashboard from "@/pages/dashboard";
 import OccsList from "@/pages/occs";
+import OccDetail from "@/pages/occ-detail";
 import FornecedoresList from "@/pages/fornecedores";
 import MateriaisList from "@/pages/materiais";
 import TemplatesList from "@/pages/templates";
@@ -26,6 +27,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Dashboard} />
         <Route path="/occs" component={OccsList} />
+        <Route path="/occs/:id" component={OccDetail} />
         <Route path="/fornecedores" component={FornecedoresList} />
         <Route path="/materiais" component={MateriaisList} />
         <Route path="/templates" component={TemplatesList} />
