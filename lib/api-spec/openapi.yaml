@@ -1,22 +1,37 @@
 openapi: 3.1.0
 info:
-  # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
-  description: API specification
+  description: MATERION - Sistema de Compras ERP API
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: fornecedores
+    description: Fornecedor operations
+  - name: empresas
+    description: Empresa operations
+  - name: setores
+    description: Setor operations
+  - name: categorias
+    description: Categoria operations
+  - name: materiais
+    description: Material operations
+  - name: occs
+    description: OCC operations
+  - name: templates
+    description: Template de OCC operations
+  - name: dashboard
+    description: Dashboard summary operations
+
 paths:
   /healthz:
     get:
       operationId: healthCheck
       tags: [health]
       summary: Health check
-      description: Returns server health status
       responses:
         "200":
           description: Healthy
@@ -24,13 +39,1206 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+
+  # ─── FORNECEDORES ───────────────────────────────────────────────────────────
+  /fornecedores:
+    get:
+      operationId: listFornecedores
+      tags: [fornecedores]
+      summary: Listar fornecedores
+      parameters:
+        - name: ativo
+          in: query
+          schema: { type: boolean }
+        - name: search
+          in: query
+          schema: { type: string }
+      responses:
+        "200":
+          description: Lista de fornecedores
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Fornecedor" }
+    post:
+      operationId: createFornecedor
+      tags: [fornecedores]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/FornecedorInput" }
+      responses:
+        "201":
+          description: Fornecedor criado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Fornecedor" }
+
+  /fornecedores/{id}:
+    get:
+      operationId: getFornecedor
+      tags: [fornecedores]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Fornecedor" }
+          description: Fornecedor encontrado
+        "404":
+          description: Não encontrado
+    patch:
+      operationId: updateFornecedor
+      tags: [fornecedores]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/FornecedorUpdate" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Fornecedor" }
+          description: Fornecedor atualizado
+    delete:
+      operationId: deleteFornecedor
+      tags: [fornecedores]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "204":
+          description: Fornecedor excluído
+
+  # ─── EMPRESAS ────────────────────────────────────────────────────────────────
+  /empresas:
+    get:
+      operationId: listEmpresas
+      tags: [empresas]
+      responses:
+        "200":
+          description: Lista de empresas
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Empresa" }
+    post:
+      operationId: createEmpresa
+      tags: [empresas]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/EmpresaInput" }
+      responses:
+        "201":
+          description: Empresa criada
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Empresa" }
+
+  /empresas/{id}:
+    patch:
+      operationId: updateEmpresa
+      tags: [empresas]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/EmpresaUpdate" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Empresa" }
+          description: Empresa atualizada
+    delete:
+      operationId: deleteEmpresa
+      tags: [empresas]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "204":
+          description: Empresa excluída
+
+  # ─── SETORES ─────────────────────────────────────────────────────────────────
+  /setores:
+    get:
+      operationId: listSetores
+      tags: [setores]
+      responses:
+        "200":
+          description: Lista de setores
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Setor" }
+    post:
+      operationId: createSetor
+      tags: [setores]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/SetorInput" }
+      responses:
+        "201":
+          description: Setor criado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Setor" }
+
+  /setores/{id}:
+    patch:
+      operationId: updateSetor
+      tags: [setores]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/SetorUpdate" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Setor" }
+          description: Setor atualizado
+    delete:
+      operationId: deleteSetor
+      tags: [setores]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "204":
+          description: Setor excluído
+
+  # ─── CATEGORIAS ──────────────────────────────────────────────────────────────
+  /categorias:
+    get:
+      operationId: listCategorias
+      tags: [categorias]
+      parameters:
+        - name: setorId
+          in: query
+          schema: { type: integer }
+      responses:
+        "200":
+          description: Lista de categorias
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Categoria" }
+    post:
+      operationId: createCategoria
+      tags: [categorias]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/CategoriaInput" }
+      responses:
+        "201":
+          description: Categoria criada
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Categoria" }
+
+  /categorias/{id}:
+    patch:
+      operationId: updateCategoria
+      tags: [categorias]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/CategoriaUpdate" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Categoria" }
+          description: Categoria atualizada
+    delete:
+      operationId: deleteCategoria
+      tags: [categorias]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "204":
+          description: Categoria excluída
+
+  # ─── MATERIAIS ───────────────────────────────────────────────────────────────
+  /materiais:
+    get:
+      operationId: listMateriais
+      tags: [materiais]
+      parameters:
+        - name: search
+          in: query
+          schema: { type: string }
+        - name: ativo
+          in: query
+          schema: { type: boolean }
+      responses:
+        "200":
+          description: Lista de materiais
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Material" }
+    post:
+      operationId: createMaterial
+      tags: [materiais]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/MaterialInput" }
+      responses:
+        "201":
+          description: Material criado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Material" }
+
+  /materiais/{id}:
+    get:
+      operationId: getMaterial
+      tags: [materiais]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Material" }
+          description: Material encontrado
+        "404":
+          description: Não encontrado
+    patch:
+      operationId: updateMaterial
+      tags: [materiais]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/MaterialUpdate" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Material" }
+          description: Material atualizado
+    delete:
+      operationId: deleteMaterial
+      tags: [materiais]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "204":
+          description: Material excluído
+
+  /materiais/{id}/historico-precos:
+    get:
+      operationId: getMaterialHistoricoPrecos
+      tags: [materiais]
+      summary: Histórico de preços do material
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "200":
+          description: Histórico de preços
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/HistoricoPreco" }
+
+  # ─── OCCs ────────────────────────────────────────────────────────────────────
+  /occs:
+    get:
+      operationId: listOccs
+      tags: [occs]
+      parameters:
+        - name: status
+          in: query
+          schema: { type: string }
+        - name: fornecedorId
+          in: query
+          schema: { type: integer }
+        - name: setorId
+          in: query
+          schema: { type: integer }
+        - name: categoriaId
+          in: query
+          schema: { type: integer }
+        - name: search
+          in: query
+          schema: { type: string }
+      responses:
+        "200":
+          description: Lista de OCCs
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Occ" }
+    post:
+      operationId: createOcc
+      tags: [occs]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/OccInput" }
+      responses:
+        "201":
+          description: OCC criada
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Occ" }
+
+  /occs/{id}:
+    get:
+      operationId: getOcc
+      tags: [occs]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/OccComItens" }
+          description: OCC encontrada
+        "404":
+          description: Não encontrada
+    patch:
+      operationId: updateOcc
+      tags: [occs]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/OccUpdate" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Occ" }
+          description: OCC atualizada
+    delete:
+      operationId: deleteOcc
+      tags: [occs]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "204":
+          description: OCC excluída
+
+  /occs/{id}/duplicar:
+    post:
+      operationId: duplicarOcc
+      tags: [occs]
+      summary: Duplicar OCC existente
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "201":
+          description: OCC duplicada
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/OccComItens" }
+
+  /occs/{id}/salvar-como-template:
+    post:
+      operationId: salvarOccComoTemplate
+      tags: [occs]
+      summary: Salvar OCC como template
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/SalvarComoTemplateInput" }
+      responses:
+        "201":
+          description: Template criado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/OccTemplate" }
+
+  /occs/from-template/{templateId}:
+    post:
+      operationId: criarOccDeTemplate
+      tags: [occs]
+      summary: Criar OCC a partir de template
+      parameters:
+        - { name: templateId, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/OccFromTemplateInput" }
+      responses:
+        "201":
+          description: OCC criada a partir do template
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/OccComItens" }
+
+  # ─── OCC ITENS ───────────────────────────────────────────────────────────────
+  /occs/{occId}/itens:
+    get:
+      operationId: listOccItens
+      tags: [occs]
+      parameters:
+        - { name: occId, in: path, required: true, schema: { type: integer } }
+      responses:
+        "200":
+          description: Itens da OCC
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/OccItem" }
+    post:
+      operationId: createOccItem
+      tags: [occs]
+      parameters:
+        - { name: occId, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/OccItemInput" }
+      responses:
+        "201":
+          description: Item criado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/OccItem" }
+
+  /occs/{occId}/itens/{id}:
+    patch:
+      operationId: updateOccItem
+      tags: [occs]
+      parameters:
+        - { name: occId, in: path, required: true, schema: { type: integer } }
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/OccItemUpdate" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/OccItem" }
+          description: Item atualizado
+    delete:
+      operationId: deleteOccItem
+      tags: [occs]
+      parameters:
+        - { name: occId, in: path, required: true, schema: { type: integer } }
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "204":
+          description: Item excluído
+
+  # ─── OCC TEMPLATES ───────────────────────────────────────────────────────────
+  /templates:
+    get:
+      operationId: listTemplates
+      tags: [templates]
+      parameters:
+        - name: tipo
+          in: query
+          schema: { type: string }
+        - name: fornecedorId
+          in: query
+          schema: { type: integer }
+        - name: setorId
+          in: query
+          schema: { type: integer }
+        - name: categoriaId
+          in: query
+          schema: { type: integer }
+        - name: search
+          in: query
+          schema: { type: string }
+        - name: ativo
+          in: query
+          schema: { type: boolean }
+        - name: favorito
+          in: query
+          schema: { type: boolean }
+      responses:
+        "200":
+          description: Lista de templates
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/OccTemplate" }
+    post:
+      operationId: createTemplate
+      tags: [templates]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/OccTemplateInput" }
+      responses:
+        "201":
+          description: Template criado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/OccTemplate" }
+
+  /templates/favoritos:
+    get:
+      operationId: listTemplatesFavoritos
+      tags: [templates]
+      summary: Templates favoritos
+      responses:
+        "200":
+          description: Templates favoritos
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/OccTemplate" }
+
+  /templates/recentes:
+    get:
+      operationId: listTemplatesRecentes
+      tags: [templates]
+      summary: Templates usados recentemente
+      responses:
+        "200":
+          description: Templates recentes
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/OccTemplate" }
+
+  /templates/{id}:
+    get:
+      operationId: getTemplate
+      tags: [templates]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/OccTemplateComItens" }
+          description: Template encontrado
+        "404":
+          description: Não encontrado
+    patch:
+      operationId: updateTemplate
+      tags: [templates]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/OccTemplateUpdate" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/OccTemplate" }
+          description: Template atualizado
+    delete:
+      operationId: deleteTemplate
+      tags: [templates]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "204":
+          description: Template excluído
+
+  /templates/{id}/favoritar:
+    patch:
+      operationId: favoritarTemplate
+      tags: [templates]
+      summary: Favoritar ou desfavoritar template
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/FavoritarInput" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/OccTemplate" }
+          description: Template atualizado
+
+  # ─── TEMPLATE ITENS ──────────────────────────────────────────────────────────
+  /templates/{templateId}/itens:
+    get:
+      operationId: listTemplateItens
+      tags: [templates]
+      parameters:
+        - { name: templateId, in: path, required: true, schema: { type: integer } }
+      responses:
+        "200":
+          description: Itens do template
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/TemplateItem" }
+    post:
+      operationId: createTemplateItem
+      tags: [templates]
+      parameters:
+        - { name: templateId, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/TemplateItemInput" }
+      responses:
+        "201":
+          description: Item criado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TemplateItem" }
+
+  /templates/{templateId}/itens/{id}:
+    patch:
+      operationId: updateTemplateItem
+      tags: [templates]
+      parameters:
+        - { name: templateId, in: path, required: true, schema: { type: integer } }
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/TemplateItemUpdate" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/TemplateItem" }
+          description: Item atualizado
+    delete:
+      operationId: deleteTemplateItem
+      tags: [templates]
+      parameters:
+        - { name: templateId, in: path, required: true, schema: { type: integer } }
+        - { name: id, in: path, required: true, schema: { type: integer } }
+      responses:
+        "204":
+          description: Item excluído
+
+  # ─── DASHBOARD ───────────────────────────────────────────────────────────────
+  /dashboard/resumo:
+    get:
+      operationId: getDashboardResumo
+      tags: [dashboard]
+      summary: Resumo do dashboard
+      responses:
+        "200":
+          description: Resumo do sistema
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/DashboardResumo" }
+
 components:
   schemas:
     HealthStatus:
       type: object
+      required: [status]
       properties:
-        status:
-          type: string
-      required:
-        - status
+        status: { type: string }
 
+    # ─── Fornecedor ────────────────────────────────────────────────────────────
+    Fornecedor:
+      type: object
+      required: [id, nome, cnpj, ativo, criadoEm]
+      properties:
+        id: { type: integer }
+        nome: { type: string }
+        cnpj: { type: string }
+        email: { type: ["string", "null"] }
+        telefone: { type: ["string", "null"] }
+        contato: { type: ["string", "null"] }
+        ativo: { type: boolean }
+        criadoEm: { type: string, format: date-time }
+
+    FornecedorInput:
+      type: object
+      required: [nome, cnpj]
+      properties:
+        nome: { type: string, minLength: 1 }
+        cnpj: { type: string }
+        email: { type: string }
+        telefone: { type: string }
+        contato: { type: string }
+        ativo: { type: boolean }
+
+    FornecedorUpdate:
+      type: object
+      properties:
+        nome: { type: string, minLength: 1 }
+        cnpj: { type: string }
+        email: { type: string }
+        telefone: { type: string }
+        contato: { type: string }
+        ativo: { type: boolean }
+
+    # ─── Empresa ───────────────────────────────────────────────────────────────
+    Empresa:
+      type: object
+      required: [id, nome, cnpj, ativo, criadoEm]
+      properties:
+        id: { type: integer }
+        nome: { type: string }
+        cnpj: { type: string }
+        ativo: { type: boolean }
+        criadoEm: { type: string, format: date-time }
+
+    EmpresaInput:
+      type: object
+      required: [nome, cnpj]
+      properties:
+        nome: { type: string, minLength: 1 }
+        cnpj: { type: string }
+        ativo: { type: boolean }
+
+    EmpresaUpdate:
+      type: object
+      properties:
+        nome: { type: string }
+        cnpj: { type: string }
+        ativo: { type: boolean }
+
+    # ─── Setor ─────────────────────────────────────────────────────────────────
+    Setor:
+      type: object
+      required: [id, nome, ativo, criadoEm]
+      properties:
+        id: { type: integer }
+        nome: { type: string }
+        ativo: { type: boolean }
+        criadoEm: { type: string, format: date-time }
+
+    SetorInput:
+      type: object
+      required: [nome]
+      properties:
+        nome: { type: string, minLength: 1 }
+        ativo: { type: boolean }
+
+    SetorUpdate:
+      type: object
+      properties:
+        nome: { type: string }
+        ativo: { type: boolean }
+
+    # ─── Categoria ─────────────────────────────────────────────────────────────
+    Categoria:
+      type: object
+      required: [id, nome, ativo, criadoEm]
+      properties:
+        id: { type: integer }
+        nome: { type: string }
+        setorId: { type: ["integer", "null"] }
+        ativo: { type: boolean }
+        criadoEm: { type: string, format: date-time }
+
+    CategoriaInput:
+      type: object
+      required: [nome]
+      properties:
+        nome: { type: string, minLength: 1 }
+        setorId: { type: integer }
+        ativo: { type: boolean }
+
+    CategoriaUpdate:
+      type: object
+      properties:
+        nome: { type: string }
+        setorId: { type: integer }
+        ativo: { type: boolean }
+
+    # ─── Material ──────────────────────────────────────────────────────────────
+    Material:
+      type: object
+      required: [id, nome, unidade, ativo, criadoEm]
+      properties:
+        id: { type: integer }
+        nome: { type: string }
+        unidade: { type: string }
+        descricao: { type: ["string", "null"] }
+        ativo: { type: boolean }
+        criadoEm: { type: string, format: date-time }
+
+    MaterialInput:
+      type: object
+      required: [nome, unidade]
+      properties:
+        nome: { type: string, minLength: 1 }
+        unidade: { type: string }
+        descricao: { type: string }
+        ativo: { type: boolean }
+
+    MaterialUpdate:
+      type: object
+      properties:
+        nome: { type: string }
+        unidade: { type: string }
+        descricao: { type: string }
+        ativo: { type: boolean }
+
+    # ─── Histórico de Preço ────────────────────────────────────────────────────
+    HistoricoPreco:
+      type: object
+      required: [id, materialId, preco, dataCompra]
+      properties:
+        id: { type: integer }
+        materialId: { type: integer }
+        fornecedorId: { type: ["integer", "null"] }
+        fornecedorNome: { type: ["string", "null"] }
+        preco: { type: number }
+        occNumero: { type: ["string", "null"] }
+        occId: { type: ["integer", "null"] }
+        dataCompra: { type: string, format: date-time }
+
+    # ─── OCC ───────────────────────────────────────────────────────────────────
+    Occ:
+      type: object
+      required: [id, numero, status, prioridade, criadoEm]
+      properties:
+        id: { type: integer }
+        numero: { type: string }
+        fornecedorId: { type: ["integer", "null"] }
+        fornecedorNome: { type: ["string", "null"] }
+        empresaId: { type: ["integer", "null"] }
+        empresaNome: { type: ["string", "null"] }
+        setorId: { type: ["integer", "null"] }
+        setorNome: { type: ["string", "null"] }
+        categoriaId: { type: ["integer", "null"] }
+        categoriaNome: { type: ["string", "null"] }
+        status: { type: string }
+        prioridade: { type: string }
+        observacoes: { type: ["string", "null"] }
+        condicoesPagamento: { type: ["string", "null"] }
+        prazo: { type: ["string", "null"] }
+        layoutPdf: { type: ["string", "null"] }
+        valorTotal: { type: ["number", "null"] }
+        criadoEm: { type: string, format: date-time }
+        atualizadoEm: { type: string, format: date-time }
+
+    OccComItens:
+      type: object
+      required: [id, numero, status, prioridade, criadoEm, itens]
+      properties:
+        id: { type: integer }
+        numero: { type: string }
+        fornecedorId: { type: ["integer", "null"] }
+        fornecedorNome: { type: ["string", "null"] }
+        empresaId: { type: ["integer", "null"] }
+        empresaNome: { type: ["string", "null"] }
+        setorId: { type: ["integer", "null"] }
+        setorNome: { type: ["string", "null"] }
+        categoriaId: { type: ["integer", "null"] }
+        categoriaNome: { type: ["string", "null"] }
+        status: { type: string }
+        prioridade: { type: string }
+        observacoes: { type: ["string", "null"] }
+        condicoesPagamento: { type: ["string", "null"] }
+        prazo: { type: ["string", "null"] }
+        layoutPdf: { type: ["string", "null"] }
+        valorTotal: { type: ["number", "null"] }
+        criadoEm: { type: string, format: date-time }
+        atualizadoEm: { type: string, format: date-time }
+        itens:
+          type: array
+          items: { $ref: "#/components/schemas/OccItem" }
+
+    OccInput:
+      type: object
+      required: [prioridade]
+      properties:
+        fornecedorId: { type: integer }
+        empresaId: { type: integer }
+        setorId: { type: integer }
+        categoriaId: { type: integer }
+        prioridade: { type: string }
+        status: { type: string }
+        observacoes: { type: string }
+        condicoesPagamento: { type: string }
+        prazo: { type: string }
+        layoutPdf: { type: string }
+
+    OccUpdate:
+      type: object
+      properties:
+        fornecedorId: { type: integer }
+        empresaId: { type: integer }
+        setorId: { type: integer }
+        categoriaId: { type: integer }
+        prioridade: { type: string }
+        status: { type: string }
+        observacoes: { type: string }
+        condicoesPagamento: { type: string }
+        prazo: { type: string }
+        layoutPdf: { type: string }
+
+    OccFromTemplateInput:
+      type: object
+      properties:
+        fornecedorId: { type: integer }
+        empresaId: { type: integer }
+        setorId: { type: integer }
+        categoriaId: { type: integer }
+        prioridade: { type: string }
+        observacoes: { type: string }
+
+    SalvarComoTemplateInput:
+      type: object
+      required: [nome, tipo]
+      properties:
+        nome: { type: string, minLength: 1 }
+        descricao: { type: string }
+        tipo: { type: string }
+
+    # ─── OCC Item ──────────────────────────────────────────────────────────────
+    OccItem:
+      type: object
+      required: [id, occId, nomeMaterial, unidade, quantidade]
+      properties:
+        id: { type: integer }
+        occId: { type: integer }
+        materialId: { type: ["integer", "null"] }
+        nomeMaterial: { type: string }
+        unidade: { type: string }
+        quantidade: { type: number }
+        precoUnitario: { type: ["number", "null"] }
+        observacao: { type: ["string", "null"] }
+        fornecedorPreferencialId: { type: ["integer", "null"] }
+        fornecedorPreferencialNome: { type: ["string", "null"] }
+
+    OccItemInput:
+      type: object
+      required: [nomeMaterial, unidade, quantidade]
+      properties:
+        materialId: { type: integer }
+        nomeMaterial: { type: string, minLength: 1 }
+        unidade: { type: string }
+        quantidade: { type: number }
+        precoUnitario: { type: number }
+        observacao: { type: string }
+        fornecedorPreferencialId: { type: integer }
+
+    OccItemUpdate:
+      type: object
+      properties:
+        materialId: { type: integer }
+        nomeMaterial: { type: string }
+        unidade: { type: string }
+        quantidade: { type: number }
+        precoUnitario: { type: number }
+        observacao: { type: string }
+        fornecedorPreferencialId: { type: integer }
+
+    # ─── OCC Template ──────────────────────────────────────────────────────────
+    OccTemplate:
+      type: object
+      required: [id, nome, tipo, ativo, favorito, criadoEm]
+      properties:
+        id: { type: integer }
+        nome: { type: string }
+        descricao: { type: ["string", "null"] }
+        tipo: { type: string }
+        fornecedorPadraoId: { type: ["integer", "null"] }
+        fornecedorPadraoNome: { type: ["string", "null"] }
+        empresaId: { type: ["integer", "null"] }
+        empresaNome: { type: ["string", "null"] }
+        setorPadraoId: { type: ["integer", "null"] }
+        setorPadraoNome: { type: ["string", "null"] }
+        categoriaPadraoId: { type: ["integer", "null"] }
+        categoriaPadraoNome: { type: ["string", "null"] }
+        prioridade: { type: ["string", "null"] }
+        observacoesPadrao: { type: ["string", "null"] }
+        condicoesPagamento: { type: ["string", "null"] }
+        prazoPadrao: { type: ["string", "null"] }
+        layoutPdf: { type: ["string", "null"] }
+        assinaturaRodape: { type: ["string", "null"] }
+        ativo: { type: boolean }
+        favorito: { type: boolean }
+        usoCount: { type: integer }
+        ultimoUso: { type: ["string", "null"], format: date-time }
+        criadoEm: { type: string, format: date-time }
+
+    OccTemplateComItens:
+      type: object
+      required: [id, nome, tipo, ativo, favorito, criadoEm, itens]
+      properties:
+        id: { type: integer }
+        nome: { type: string }
+        descricao: { type: ["string", "null"] }
+        tipo: { type: string }
+        fornecedorPadraoId: { type: ["integer", "null"] }
+        fornecedorPadraoNome: { type: ["string", "null"] }
+        empresaId: { type: ["integer", "null"] }
+        empresaNome: { type: ["string", "null"] }
+        setorPadraoId: { type: ["integer", "null"] }
+        setorPadraoNome: { type: ["string", "null"] }
+        categoriaPadraoId: { type: ["integer", "null"] }
+        categoriaPadraoNome: { type: ["string", "null"] }
+        prioridade: { type: ["string", "null"] }
+        observacoesPadrao: { type: ["string", "null"] }
+        condicoesPagamento: { type: ["string", "null"] }
+        prazoPadrao: { type: ["string", "null"] }
+        layoutPdf: { type: ["string", "null"] }
+        assinaturaRodape: { type: ["string", "null"] }
+        ativo: { type: boolean }
+        favorito: { type: boolean }
+        usoCount: { type: integer }
+        ultimoUso: { type: ["string", "null"], format: date-time }
+        criadoEm: { type: string, format: date-time }
+        itens:
+          type: array
+          items: { $ref: "#/components/schemas/TemplateItem" }
+
+    OccTemplateInput:
+      type: object
+      required: [nome, tipo]
+      properties:
+        nome: { type: string, minLength: 1 }
+        descricao: { type: string }
+        tipo: { type: string }
+        fornecedorPadraoId: { type: integer }
+        empresaId: { type: integer }
+        setorPadraoId: { type: integer }
+        categoriaPadraoId: { type: integer }
+        prioridade: { type: string }
+        observacoesPadrao: { type: string }
+        condicoesPagamento: { type: string }
+        prazoPadrao: { type: string }
+        layoutPdf: { type: string }
+        assinaturaRodape: { type: string }
+        ativo: { type: boolean }
+
+    OccTemplateUpdate:
+      type: object
+      properties:
+        nome: { type: string }
+        descricao: { type: string }
+        tipo: { type: string }
+        fornecedorPadraoId: { type: integer }
+        empresaId: { type: integer }
+        setorPadraoId: { type: integer }
+        categoriaPadraoId: { type: integer }
+        prioridade: { type: string }
+        observacoesPadrao: { type: string }
+        condicoesPagamento: { type: string }
+        prazoPadrao: { type: string }
+        layoutPdf: { type: string }
+        assinaturaRodape: { type: string }
+        ativo: { type: boolean }
+
+    FavoritarInput:
+      type: object
+      required: [favorito]
+      properties:
+        favorito: { type: boolean }
+
+    # ─── Template Item ─────────────────────────────────────────────────────────
+    TemplateItem:
+      type: object
+      required: [id, templateId, nomeMaterial, unidade, quantidadePadrao]
+      properties:
+        id: { type: integer }
+        templateId: { type: integer }
+        materialId: { type: ["integer", "null"] }
+        nomeMaterial: { type: string }
+        unidade: { type: string }
+        quantidadePadrao: { type: number }
+        observacao: { type: ["string", "null"] }
+        fornecedorPreferencialId: { type: ["integer", "null"] }
+        fornecedorPreferencialNome: { type: ["string", "null"] }
+
+    TemplateItemInput:
+      type: object
+      required: [nomeMaterial, unidade, quantidadePadrao]
+      properties:
+        materialId: { type: integer }
+        nomeMaterial: { type: string, minLength: 1 }
+        unidade: { type: string }
+        quantidadePadrao: { type: number }
+        observacao: { type: string }
+        fornecedorPreferencialId: { type: integer }
+
+    TemplateItemUpdate:
+      type: object
+      properties:
+        materialId: { type: integer }
+        nomeMaterial: { type: string }
+        unidade: { type: string }
+        quantidadePadrao: { type: number }
+        observacao: { type: string }
+        fornecedorPreferencialId: { type: integer }
+
+    # ─── Dashboard ─────────────────────────────────────────────────────────────
+    DashboardResumo:
+      type: object
+      required: [totalOccs, totalTemplates, totalFornecedores, totalMateriais, occsPorStatus, templatesPorTipo]
+      properties:
+        totalOccs: { type: integer }
+        totalTemplates: { type: integer }
+        totalFornecedores: { type: integer }
+        totalMateriais: { type: integer }
+        occsPorStatus:
+          type: array
+          items:
+            type: object
+            required: [status, total]
+            properties:
+              status: { type: string }
+              total: { type: integer }
+        templatesPorTipo:
+          type: array
+          items:
+            type: object
+            required: [tipo, total]
+            properties:
+              tipo: { type: string }
+              total: { type: integer }
+        occsRecentes:
+          type: array
+          items: { $ref: "#/components/schemas/Occ" }
+        valorTotalMes: { type: ["number", "null"] }

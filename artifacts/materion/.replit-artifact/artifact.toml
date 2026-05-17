@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "MATERION - Sistema de Compras"
+version = "1.0.0"
+id = "artifacts/materion"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20947
+
+[services.development]
+run = "pnpm --filter @workspace/materion run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/materion", "run", "build" ]
+publicDir = "artifacts/materion/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20947"
+BASE_PATH = "/"
