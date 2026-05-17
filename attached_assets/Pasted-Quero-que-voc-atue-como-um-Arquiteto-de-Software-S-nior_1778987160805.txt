@@ -1,0 +1,3200 @@
+Quero que você atue como um Arquiteto de Software Sênior e Especialista em Documentação Técnica.
+
+Sua tarefa é criar uma documentação EXTREMAMENTE PROFISSIONAL, COMPLETA, DETALHADA e bem estruturada para um sistema web de gestão de compras e estoque de uma empresa de resistências.
+
+A documentação deve ser escrita em português do Brasil.
+
+IMPORTANTE:
+- Não resuma.
+- Não simplifique.
+- Pense como uma software house profissional documentando um sistema empresarial real.
+- Estruture tudo de forma organizada.
+- Utilize títulos, subtítulos, listas, tabelas e seções bem separadas.
+- Explique fluxos, regras de negócio, arquitetura, entidades e funcionalidades.
+- Gere uma documentação extensa e altamente detalhada.
+- O sistema deve parecer um SaaS corporativo moderno e robusto.
+
+==================================================
+NOME DO SISTEMA
+==================================================
+
+Crie um nome profissional para o sistema.
+
+==================================================
+OBJETIVO DO SISTEMA
+==================================================
+
+O sistema será utilizado pelo setor de compras de uma empresa de resistências para:
+
+- Controle de estoque
+- Gestão de fornecedores
+- Gestão de compras
+- Controle financeiro de compras
+- Geração de pedidos de orçamento
+- Relatórios
+- Dashboard gerencial
+- Controle de materiais
+- Histórico de movimentações
+- Upload de fotos e documentos
+- Controle de categorias e subcategorias
+- Organização de nichos de materiais
+- Análise de gastos mensais
+
+==================================================
+FUNCIONALIDADES OBRIGATÓRIAS
+==================================================
+
+O sistema deve possuir:
+
+## 1. Gestão de Estoque
+- Cadastro de materiais
+- Código interno
+- Nome do material
+- Categoria
+- Subcategoria
+- Nicho
+- Unidade de medida
+- Quantidade atual
+- Estoque mínimo
+- Estoque máximo
+- Localização no estoque
+- Upload de fotos
+- Observações internas
+- Controle de entrada e saída
+- Histórico completo de movimentações
+- Registro de usuário responsável pela movimentação
+- Data e hora das movimentações
+- Motivo da movimentação
+
+## 2. Gestão de Fornecedores
+- Cadastro completo de fornecedores
+- Razão social
+- Nome fantasia
+- CNPJ
+- Inscrição estadual
+- Contatos
+- Telefones
+- E-mails
+- WhatsApp
+- Endereço
+- Categorias atendidas
+- Subcategorias
+- Nichos
+- Observações
+- Avaliação interna do fornecedor
+- Histórico de compras
+- Histórico de preços
+- Upload de arquivos e documentos
+
+## 3. Gestão de Compras
+- Cadastro de compras
+- Solicitações internas
+- Aprovação de compras
+- Status da compra
+- Compras pendentes
+- Compras aprovadas
+- Compras canceladas
+- Compras recebidas
+- Quantidade
+- Valor unitário
+- Valor total
+- Data da compra
+- Prazo de entrega
+- Fornecedor relacionado
+- Observações
+- Centro de custo
+- Número do pedido
+- Histórico completo
+
+## 4. Cotações e Orçamentos
+- Geração automática de pedidos de orçamento
+- PDF profissional
+- Layout corporativo
+- Inclusão de logo
+- Dados da empresa
+- Lista de materiais
+- Quantidades
+- Observações
+- Prazo desejado
+- Histórico de cotações
+- Comparativo entre fornecedores
+- Melhor preço
+- Lead time
+
+## 5. Dashboard Gerencial
+- Gráfico de gastos mensais
+- Gráfico por fornecedor
+- Gráfico por categoria
+- Gráfico por subcategoria
+- Ranking de fornecedores
+- Materiais mais comprados
+- Estoque crítico
+- Indicadores financeiros
+- KPIs
+- Resumo geral do sistema
+
+## 6. Sistema Visual
+- Dark mode
+- Light mode
+- Troca dinâmica de tema
+- Temas:
+  - Azul
+  - Verde
+  - Roxo
+  - Laranja
+  - Vermelho
+- Garantir contraste correto de texto
+- Interface moderna
+- Responsiva
+- Visual corporativo premium
+
+## 7. Usuários e Permissões
+- Login
+- Cadastro de usuários
+- Controle de permissões
+- Perfis:
+  - Administrador
+  - Comprador
+  - Estoquista
+  - Financeiro
+  - Visualizador
+- Logs de ações
+- Histórico de alterações
+
+==================================================
+DOCUMENTAÇÃO DEVE CONTER
+==================================================
+
+## 1. Visão Geral do Sistema
+Explicação completa do sistema.
+
+## 2. Arquitetura do Sistema
+- Frontend
+- Backend
+- Banco de dados
+- APIs
+- Estrutura modular
+- Escalabilidade
+- Segurança
+
+## 3. Tecnologias Recomendadas
+Sugira stack moderna completa:
+- Frontend
+- Backend
+- Banco
+- Autenticação
+- Armazenamento
+- PDFs
+- Dashboard
+- Hospedagem
+
+## 4. Estrutura do Banco de Dados
+Criar:
+- tabelas
+- relacionamentos
+- entidades
+- campos
+- tipos de dados
+- chaves primárias
+- chaves estrangeiras
+
+Explique tudo detalhadamente.
+
+## 5. Fluxos do Sistema
+Criar fluxos completos:
+- fluxo de compra
+- fluxo de entrada de estoque
+- fluxo de aprovação
+- fluxo de cotação
+- fluxo de geração de PDF
+- fluxo de atualização de estoque
+
+## 6. Regras de Negócio
+Documente regras detalhadas.
+
+## 7. Estrutura de Telas
+Documente:
+- todas as telas
+- componentes
+- tabelas
+- filtros
+- gráficos
+- botões
+- menus
+- navegação
+
+## 8. UX/UI
+Explique:
+- design system
+- tipografia
+- responsividade
+- acessibilidade
+- experiência do usuário
+
+## 9. Segurança
+Documente:
+- autenticação
+- permissões
+- proteção de dados
+- logs
+- backups
+- LGPD
+
+## 10. Escalabilidade
+Explique como o sistema pode crescer futuramente.
+
+## 11. Funcionalidades Futuras
+Sugira melhorias avançadas:
+- IA
+- previsão de estoque
+- integração ERP
+- integração fiscal
+- OCR de nota fiscal
+- automações
+- notificações
+- app mobile
+
+## 12. Estrutura SaaS
+Explique como transformar o sistema em um SaaS profissional.
+
+## 13. Roadmap
+Crie roadmap:
+- MVP
+- V1
+- V2
+- V3
+
+## 14. Conclusão Técnica
+Faça uma conclusão profissional.
+
+==================================================
+QUALIDADE ESPERADA
+==================================================
+
+A documentação deve parecer:
+- documentação de software enterprise
+- documentação de software house premium
+- documento técnico de alto nível
+- extremamente organizada
+- altamente detalhada
+- profissional
+- moderna
+- robusta
+
+Não economize detalhes.
+Gere o máximo de profundidade técnica possível.
+
+
+You are a senior software architect, product analyst, and technical documentation specialist.
+
+Your task is to create the most complete, professional, and well-structured SOFTWARE DOCUMENTATION possible for a web application that will be built in Base44.
+
+The final documentation MUST be written entirely in Portuguese (Brazilian Portuguese), even though these instructions are in English.
+
+The documentation must be highly detailed, enterprise-grade, and practical enough to guide the development of a real production system.
+
+Do not write a summary.
+Do not be generic.
+Do not be minimal.
+Do not leave important details out.
+Do not make vague statements.
+Think like a premium software house delivering a complete technical specification for a corporate client.
+
+==================================================
+CONTEXT OF THE SYSTEM
+==================================================
+
+The system is for the Purchasing Department of a company that manufactures resistors.
+
+It must help manage:
+
+- Inventory
+- Incoming material with photo attachment
+- Supplier management
+- Product/material categories and subcategories
+- Notes per supplier and per item
+- Purchase records
+- Budget request / quotation PDF generation
+- Monthly spending analytics
+- Financial control of purchases
+- Professional dashboard
+- Dark mode and light mode
+- Theme customization with colors:
+  - Blue
+  - Green
+  - Purple
+  - Orange
+  - Red
+- Theme switching must always preserve text readability and contrast
+- Data history and traceability
+- Everything a professional purchasing department of an industrial company would need
+
+==================================================
+PRIMARY GOAL
+==================================================
+
+Create a complete documentation that can be directly used to build the system in Base44 with minimal ambiguity.
+
+The documentation must be detailed enough to define:
+- what the system does
+- how each module works
+- how the screens are organized
+- what data must be stored
+- what relationships exist between data
+- what workflows users will follow
+- what business rules must be enforced
+- what permissions must exist
+- what reports and charts must be available
+- how PDFs must be generated
+- how the UI should behave
+- how themes and colors should work
+- how the app should be structured for Base44 implementation
+
+==================================================
+MANDATORY OUTPUT LANGUAGE
+==================================================
+
+The final documentation must be in Portuguese only.
+
+Do not answer in English.
+Do not mix languages.
+All headings, explanations, labels, rules, and examples must be in Portuguese.
+
+==================================================
+DOCUMENT STRUCTURE REQUIRED
+==================================================
+
+Create a full document with the following sections:
+
+1. Nome do Sistema
+- Create a professional and modern name for the system
+- Explain briefly why the name fits the product
+
+2. Visão Geral do Sistema
+- Explain the purpose of the system
+- Explain the problem it solves
+- Explain the value it brings to a purchasing department
+
+3. Objetivos do Produto
+- Functional objectives
+- Business objectives
+- Operational objectives
+
+4. Escopo do Sistema
+- What is included
+- What is excluded in the initial version
+- What can be added in future versions
+
+5. Perfis de Usuário e Permissões
+Define at least:
+- Administrador
+- Comprador
+- Estoquista
+- Financeiro
+- Visualizador
+
+For each role, describe:
+- What can view
+- What can create
+- What can edit
+- What can delete
+- What can approve
+- What restrictions exist
+
+6. Módulos do Sistema
+Create a complete description for each module:
+
+6.1 Estoque
+Must include:
+- Cadastro de materiais
+- Código interno
+- Nome
+- Categoria
+- Subcategoria
+- Nicho
+- Unidade de medida
+- Quantidade atual
+- Estoque mínimo
+- Estoque máximo
+- Localização
+- Foto do material
+- Observações
+- Entrada e saída
+- Histórico de movimentações
+- Responsável pela alteração
+- Data e hora
+
+6.2 Fornecedores
+Must include:
+- Razão social
+- Nome fantasia
+- CNPJ
+- Inscrição estadual
+- Contato
+- E-mail
+- Telefone
+- WhatsApp
+- Endereço
+- Categorias atendidas
+- Subcategorias atendidas
+- Nichos atendidos
+- Observações internas
+- Histórico de compras
+- Histórico de cotações
+- Anexos e documentos
+
+6.3 Compras
+Must include:
+- Registro de compras
+- Data
+- Fornecedor
+- Material
+- Quantidade
+- Valor unitário
+- Valor total
+- Prazo de entrega
+- DDL / prazo de pagamento
+- Status
+- Observações
+- Centro de custo
+- Histórico
+- Filtros por período, fornecedor, categoria, item e status
+
+6.4 Cotações e Pedido de Orçamento
+Must include:
+- Geração de pedido de orçamento
+- PDF profissional
+- Logo da empresa
+- Dados da empresa
+- Dados do fornecedor
+- Lista de itens
+- Quantidades
+- Observações
+- Condições
+- Prazo
+- Número do documento
+- Data de emissão
+- Histórico de envio
+- Registro de respostas
+
+6.5 Dashboard Gerencial
+Must include:
+- Total gasto no mês
+- Total gasto por fornecedor
+- Total gasto por categoria
+- Total gasto por subcategoria
+- Itens mais comprados
+- Materiais com estoque baixo
+- Compras por período
+- Compras por centro de custo
+- Comparativo mensal
+- Indicadores principais
+
+6.6 Relatórios
+Must include:
+- Relatórios por período
+- Relatórios por fornecedor
+- Relatórios por categoria
+- Relatórios por item
+- Relatórios financeiros
+- Exportação em PDF
+- Exportação em Excel
+- Exportação em CSV
+
+6.7 Tema e Aparência
+Must include:
+- Modo claro
+- Modo escuro
+- Tema azul
+- Tema verde
+- Tema roxo
+- Tema laranja
+- Tema vermelho
+- Persistência do tema por usuário
+- Alto contraste
+- Legibilidade garantida em qualquer combinação
+
+6.8 Auditoria e Histórico
+Must include:
+- Log de ações
+- Quem alterou
+- O que foi alterado
+- Data e hora
+- Valor anterior
+- Novo valor
+- Rastreamento de exclusões e edições
+
+7. Regras de Negócio
+Describe detailed business rules such as:
+- Stock cannot go below zero
+- Minimum stock alerts
+- Purchases require supplier association
+- PDF generation rules
+- Theme contrast rules
+- Permission rules
+- Data validation rules
+- Required and optional fields
+- Movement traceability
+- Purchase history consistency
+
+8. Fluxos do Sistema
+Document the complete flows:
+- New material registration
+- Incoming material receipt
+- Stock entry
+- Stock exit
+- Supplier registration
+- Purchase creation
+- Purchase approval
+- Quote request generation
+- PDF generation
+- Monthly report analysis
+- Theme switching
+- Alert generation
+
+For each flow, explain:
+- Trigger
+- User action
+- System validation
+- Data saved
+- Expected result
+- Possible errors
+- Success messages
+
+9. Estrutura de Telas
+Define every screen in the application:
+- Login
+- Dashboard
+- Materials list
+- Material detail
+- Supplier list
+- Supplier detail
+- Purchase list
+- Purchase detail
+- Quote generator
+- Reports
+- Settings
+- User management
+- Audit log
+- Theme settings
+
+For each screen, specify:
+- Main purpose
+- Visible components
+- Buttons
+- Tables
+- Filters
+- Forms
+- Empty states
+- Loading states
+- Error states
+- Mobile behavior
+- Desktop behavior
+
+10. Estrutura de Dados / Banco de Dados
+Create a very detailed logical data model.
+
+Include:
+- Entities
+- Tables
+- Fields
+- Field types
+- Primary keys
+- Foreign keys
+- Relationships
+- Required fields
+- Nullable fields
+- Index suggestions
+- Unique constraints
+
+At minimum include entities for:
+- users
+- roles
+- materials
+- inventory_movements
+- suppliers
+- supplier_categories
+- supplier_documents
+- purchases
+- purchase_items
+- quote_requests
+- quote_request_items
+- attachments
+- audit_logs
+- themes
+- notifications
+- reports
+
+Explain each table clearly.
+
+11. Arquitetura Recomendada para Base44
+Explain how the system should be structured to work well in Base44.
+
+Include:
+- module separation
+- page structure
+- reusable components
+- database design approach
+- workflow logic
+- permission logic
+- file upload handling
+- PDF generation approach
+- theme handling
+- scalability considerations
+- maintainability considerations
+
+12. Design System e UX/UI
+Explain:
+- typography
+- spacing
+- cards
+- tables
+- buttons
+- forms
+- icons
+- spacing hierarchy
+- color usage
+- dark/light design rules
+- accessibility
+- responsive behavior
+- visual consistency
+- professional enterprise styling
+
+13. Validation Rules
+Define validation for:
+- required fields
+- numeric fields
+- dates
+- CNPJ
+- e-mail
+- phone
+- quantities
+- prices
+- file uploads
+- image formats
+- PDF generation inputs
+
+14. Notifications and Alerts
+Define alerts for:
+- low stock
+- overdue purchase
+- supplier without response
+- missing payment terms
+- inconsistent data
+- pending approval
+- stock movement errors
+
+15. Security and Access Control
+Include:
+- login
+- password rules
+- permission control
+- data protection
+- auditability
+- restricted actions
+- session handling
+- security best practices
+- file upload protection
+
+16. Reports and KPIs
+Define:
+- what each report shows
+- what filters it supports
+- what charts it uses
+- what KPIs appear in the dashboard
+- how users interpret the results
+
+17. Future Improvements
+Suggest future versions such as:
+- barcode / QR code support
+- AI-based recommendations
+- supplier score system
+- forecasting
+- ERP integration
+- OCR for invoices
+- mobile app
+- push notifications
+- automation with email or WhatsApp
+
+18. MVP / V1 / V2 / V3 Roadmap
+Create a phased roadmap:
+- MVP
+- V1
+- V2
+- V3
+
+For each phase, define:
+- features included
+- business value
+- development priority
+
+19. Final Technical Conclusion
+Write a professional conclusion explaining why the system is valuable, scalable, and suitable for a real company.
+
+==================================================
+WRITING STYLE REQUIREMENTS
+==================================================
+
+The documentation must:
+- sound professional
+- be highly organized
+- be highly detailed
+- be technically precise
+- look like enterprise software documentation
+- be suitable for an industrial company
+- avoid generic phrasing
+- avoid repetition
+- avoid superficial explanations
+- use tables where appropriate
+- use clear hierarchy of headings and subheadings
+- present the content in a way that is easy to implement in Base44
+
+==================================================
+IMPORTANT NOTES
+==================================================
+
+- Do not mention that this was generated by AI.
+- Do not mention limitations of Base44 unless relevant to the implementation strategy.
+- Do not leave anything as “to be defined”.
+- When you need to choose something, make a strong and sensible professional choice.
+- Prefer a practical enterprise solution over an overly academic one.
+- The documentation should feel like it was created by a senior team of analysts, product managers, and architects.
+
+==================================================
+FINAL OUTPUT
+==================================================
+
+Return only the documentation in Portuguese.
+No extra explanation.
+No introduction outside the document.
+No commentary.
+No English text.
+
+Create the best and most complete documentation possible.
+
+Create a complete web application for a Purchasing Management System for an industrial company that manufactures resistors.
+
+The system must be fully functional, production-oriented, and designed as a professional SaaS-grade internal enterprise tool.
+
+==================================================
+CORE PURPOSE
+==================================================
+
+The system will manage:
+- Inventory control
+- Suppliers
+- Purchase orders
+- Quotation requests (PDF generation)
+- Stock movements (entry/exit)
+- Financial tracking of purchases
+- Monthly spending analytics
+- Categories and subcategories of materials
+- Attachments (photos, invoices, documents)
+- Full audit history
+
+==================================================
+MAIN MODULES
+==================================================
+
+1. Inventory (Stock Management)
+- Create, edit, delete materials
+- Fields: name, internal code, category, subcategory, niche, unit, current quantity, min stock, max stock, location
+- Upload material image
+- Stock movement history (IN / OUT)
+- Each movement must store: user, date, reason, quantity change
+- Prevent stock from going below zero
+- Highlight low stock items visually
+
+2. Suppliers
+- Supplier registration (company name, trade name, CNPJ, contact info)
+- Categories/subcategories they supply
+- Notes per supplier
+- Attach documents (PDF, images, catalogs)
+- Supplier purchase history
+
+3. Purchases
+- Create purchase orders
+- Fields: supplier, items, quantity, unit price, total price, payment terms (DDL), delivery deadline
+- Status flow:
+  Requested → Quotation → Approved → Purchased → In Transit → Received → Cancelled
+- Filters by date, supplier, category, status
+
+4. Quotations (RFQ)
+- Generate professional PDF quotation requests
+- Include:
+  company logo, supplier info, item list, quantities, terms, date, request number
+- Save quotation history
+- Track supplier responses
+- Compare suppliers per item
+
+5. Dashboard (Analytics)
+- Monthly total spend
+- Spend by supplier
+- Spend by category/subcategory
+- Most purchased materials
+- Low stock alerts
+- Purchase trends over time
+- KPIs cards (total spend, active suppliers, total materials, pending approvals)
+
+6. Reports
+- Export reports in PDF, Excel, CSV
+- Filters: date range, supplier, category, item, cost center
+- Financial summaries and purchase breakdowns
+
+7. Users & Permissions
+Roles:
+- Admin
+- Purchaser
+- Warehouse
+- Finance
+- Viewer
+
+Each role must have granular permissions:
+- view / create / edit / delete / approve
+
+8. Audit Log
+- Track every change in the system
+- Store: user, action, timestamp, old value, new value
+- Must be immutable
+
+9. Themes & UI Settings
+- Light mode / Dark mode
+- Theme colors:
+  Blue, Green, Purple, Orange, Red
+- Theme must be user-specific (saved preference)
+- Maintain contrast and readability in all combinations
+
+==================================================
+CRITICAL UX / UI DESIGN REQUIREMENTS
+==================================================
+
+The application must look like a modern enterprise SaaS used by large industrial companies.
+
+Follow these UX/UI rules strictly:
+
+### 1. Visual Hierarchy
+- Use strong spacing system (8px grid)
+- Clear separation between sections
+- Headings must be visually distinct
+- Primary actions must always stand out
+
+### 2. Layout System
+- Use a clean sidebar navigation (left side)
+- Top bar for search, notifications, and user profile
+- Main content area with card-based layout
+- Avoid clutter and dense screens
+
+### 3. Color System
+- Use neutral base (white/gray or dark gray in dark mode)
+- Accent colors ONLY for actions, status, and highlights
+- Each theme color must affect:
+  - primary buttons
+  - active states
+  - charts
+  - highlights
+- Never sacrifice readability for aesthetics
+
+### 4. Tables UX (VERY IMPORTANT)
+- Tables must include:
+  - search bar
+  - filters
+  - pagination
+  - sortable columns
+  - row hover states
+  - quick actions menu (edit/view/delete)
+- Highlight critical values:
+  - low stock (red/orange)
+  - high spend (accent color)
+  - overdue purchases
+
+### 5. Forms UX
+- Group fields logically
+- Use multi-step forms for complex entries (purchases, suppliers)
+- Inline validation (real-time errors)
+- Clear required field indicators
+- Auto-save drafts where possible
+
+### 6. Dashboard UX
+- Use KPI cards at the top
+- Charts must be simple and readable:
+  - bar charts for comparisons
+  - line charts for trends
+  - pie charts only for simple breakdowns
+- Add time filters (7d, 30d, 90d, yearly)
+
+### 7. Microinteractions
+- Smooth transitions between pages
+- Hover states on buttons/cards
+- Loading skeletons instead of spinners
+- Toast notifications for actions (success/error)
+
+### 8. Accessibility
+- High contrast in all themes
+- Large enough font sizes (minimum 14–16px base)
+- Do not rely on color alone for status (use icons + labels)
+
+### 9. Performance UX
+- Fast-loading tables (pagination or lazy loading)
+- Avoid rendering too many records at once
+- Use caching for dashboard metrics
+
+### 10. Mobile Responsiveness
+- Sidebar collapses into hamburger menu
+- Tables become stacked cards on mobile
+- Forms become single-column layout
+- Charts resize properly
+
+==================================================
+BUSINESS LOGIC REQUIREMENTS
+==================================================
+
+- Stock must never go negative
+- Every stock movement must generate an audit log
+- Every purchase must be linked to a supplier
+- Every supplier must support multiple categories
+- Every quotation must generate a downloadable PDF
+- All financial values must be stored with precision
+- All actions must be traceable by user
+
+==================================================
+SYSTEM QUALITY EXPECTATION
+==================================================
+
+This system must feel like:
+- a professional ERP-lite system
+- a modern SaaS dashboard
+- a corporate procurement tool used daily in factories
+
+The UI must prioritize:
+clarity → speed → usability → aesthetics
+
+NOT just visual beauty.
+
+==================================================
+FINAL GOAL
+==================================================
+
+Generate a complete, production-ready application structure in Base44 with:
+- all pages
+- all database structure
+- all workflows
+- all permissions
+- all UI components
+- polished enterprise design system
+
+Update the existing Base44 application to reflect the following changes and enhancements.
+
+==================================================
+1. SYSTEM NAME CHANGE
+==================================================
+
+Rename the entire system to:
+
+MATERION
+
+This name must be reflected across:
+- Application title
+- Sidebar branding
+- Login screen
+- Dashboard header
+- PDF documents generated by the system
+- Internal references and metadata
+
+The branding should feel:
+- industrial
+- modern
+- premium SaaS
+- aligned with manufacturing and procurement operations
+
+==================================================
+2. NEW INVENTORY ORGANIZATION MODEL (CRITICAL UPDATE)
+==================================================
+
+Redesign the inventory system to support a hierarchical and multi-dimensional structure:
+
+The inventory must now support:
+
+### 2.1 SECTORS (Top Level Organization)
+Users must be able to create and manage SECTORS.
+
+Examples of sectors:
+- Estoque Cartucho
+- Almoxarifado
+- Micro
+- Expedição
+- Produção
+- Recebimento
+
+Each sector must:
+- be fully customizable (create/edit/delete)
+- have its own internal structure
+- contain multiple categories and subcategories
+- display separate dashboards or filtered views
+
+==================================================
+### 2.2 CATEGORIES (Inside each sector or global)
+Each material must belong to a CATEGORY.
+
+Examples:
+- Tubos
+- Rabichos
+- Componentes Elétricos
+- Ferramentas
+- Insumos
+
+IMPORTANT RULE:
+The system must support BOTH:
+- global categories (shared across sectors)
+- sector-specific categories
+
+==================================================
+### 2.3 SUBCATEGORIES (Hierarchical classification)
+Each category must have subcategories.
+
+Examples:
+Category: Tubos
+- Subcategory: Aço Inox A304
+- Subcategory: Aço Inox 316L
+- Subcategory: Cobre
+- Subcategory: Latão
+
+Subcategories must allow:
+- technical specifications
+- material grades
+- standards
+- notes
+
+==================================================
+3. INTELLIGENT AUTO-CLASSIFICATION (IMPORTANT FEATURE)
+==================================================
+
+The system must intelligently suggest classification when creating or editing materials.
+
+When the user types a material name (example: "tubo inox A304 1/4"), the system should:
+
+- Suggest CATEGORY automatically (e.g. Tubos)
+- Suggest SUBCATEGORY automatically (e.g. Aço Inox A304)
+- Allow user confirmation or override
+
+This must work as:
+- rule-based matching OR
+- keyword-based suggestion system
+
+Examples:
+- "tubo" → category: Tubos
+- "rabicho" → category: Rabichos
+- "teflon" → category: Almoxarifado / Insumos
+- "pasta rosa" → category: Almoxarifado / Químicos
+
+==================================================
+4. MATERIAL REGISTRATION IMPROVEMENTS
+==================================================
+
+Each material must now include:
+
+- Sector (mandatory)
+- Category (mandatory)
+- Subcategory (optional but recommended)
+- Technical specification (free text)
+- Notes field (ENHANCED - very important)
+
+==================================================
+5. ENHANCED NOTES / OBSERVATIONS SYSTEM
+==================================================
+
+The notes field must support structured operational logs.
+
+Users must be able to write:
+
+- stock update logs
+- contextual notes
+- operational comments
+- collaboration notes
+
+Example format:
+
+"Atualização realizada em 15/05 às 09:00 com apoio do encarregado. Foram ajustados 120 unidades de tubos inox A304 após conferência física no estoque."
+
+IMPORTANT:
+- Notes must be timestamp-friendly
+- Optionally allow auto-insert of date/time and user
+- Each update should optionally append to history log
+
+Also create a SEPARATE HISTORY LOG section:
+- automatic system-generated entries
+- manual notes
+- audit trail integration
+
+==================================================
+6. SECTOR-BASED INVENTORY VIEW
+==================================================
+
+The inventory module must support filtering and navigation by:
+
+- Sector view (primary navigation)
+- Category view
+- Subcategory view
+- Full global view
+
+Each sector must behave like a “mini inventory system” inside the main system.
+
+Example structure:
+
+ESTOQUE CARTUCHO
+  ├── Tubos
+  │     ├── Aço Inox A304
+  │     ├── Aço Inox 316L
+  ├── Rabichos
+  │     ├── Bitola fina
+  │     ├── Bitola grossa
+
+ALMOXARIFADO
+  ├── Teflon
+  ├── Pasta Rosa
+  ├── Insumos Químicos
+
+EXPEDIÇÃO
+  ├── Embalagens
+  ├── Etiquetas
+
+==================================================
+7. MATERIAL AUTO-ROUTING (IMPORTANT LOGIC)
+==================================================
+
+When a material is created or edited:
+
+- The system must suggest:
+  - Sector
+  - Category
+  - Subcategory
+
+Based on:
+- material name keywords
+- historical classification patterns
+- similar existing items
+
+User can:
+- accept suggestion
+- modify manually
+- override completely
+
+==================================================
+8. UI/UX REQUIREMENTS FOR THIS FEATURE
+==================================================
+
+- Sector selector must be prominent in material form
+- Category and subcategory must be dependent dropdowns
+- Use breadcrumb navigation:
+  Sector > Category > Subcategory > Material
+- Provide tree view navigation for inventory
+- Allow fast switching between sectors
+- Allow drag-and-drop reassignment of materials (optional but recommended)
+
+==================================================
+9. DATA INTEGRITY RULES
+==================================================
+
+- Every material must belong to a sector
+- Category must always be consistent with sector context
+- Subcategory must belong to selected category
+- Prevent orphan materials without classification
+- Log all classification changes in audit history
+
+==================================================
+10. SYSTEM BEHAVIOR EXPECTATION
+==================================================
+
+The system must now behave like:
+- a professional industrial ERP inventory module
+- highly structured
+- fast navigation between hierarchical levels
+- scalable for thousands of materials
+- optimized for real factory usage
+
+==================================================
+FINAL REQUIREMENT
+==================================================
+
+Apply all changes without breaking existing modules:
+- purchases
+- suppliers
+- dashboard
+- reports
+- PDFs
+- themes
+
+Maintain full compatibility and data consistency.
+
+Atualize o sistema MATERION para garantir 100% de padronização em português do Brasil em toda a aplicação.
+
+==================================================
+OBJETIVO
+==================================================
+
+Todo o sistema deve estar completamente em português (pt-BR), sem exceções, incluindo:
+- interface
+- menus
+- botões
+- mensagens
+- validações
+- tooltips
+- dashboards
+- relatórios
+- PDFs gerados
+- nomes de campos visíveis ao usuário
+
+==================================================
+TRADUÇÃO COMPLETA DA INTERFACE
+==================================================
+
+Substituir todos os termos em inglês por equivalentes em português.
+
+Exemplos obrigatórios:
+
+- Dashboard → Painel
+- Inventory → Estoque
+- Suppliers → Fornecedores
+- Purchases → Compras
+- Reports → Relatórios
+- Settings → Configurações
+- Audit Log → Histórico de Auditoria
+- Create → Criar
+- Edit → Editar
+- Delete → Excluir
+- Save → Salvar
+- Cancel → Cancelar
+- Search → Pesquisar
+- Filter → Filtrar
+- Status → Situação
+- Quantity → Quantidade
+- Price → Preço
+- Total → Total
+- Date → Data
+
+==================================================
+PADRONIZAÇÃO DE NOMES DE CAMPOS
+==================================================
+
+Todos os campos devem estar em português:
+
+- material_name → Nome do material
+- supplier_name → Nome do fornecedor
+- created_at → Data de criação (exibição)
+- updated_at → Data de atualização (exibição)
+- stock_quantity → Quantidade em estoque
+- minimum_stock → Estoque mínimo
+- maximum_stock → Estoque máximo
+- unit_price → Preço unitário
+- total_price → Preço total
+
+==================================================
+MENSAGENS DO SISTEMA
+==================================================
+
+Todas as mensagens automáticas devem estar em português:
+
+Exemplos:
+- "Material criado com sucesso"
+- "Estoque atualizado com sucesso"
+- "Erro ao salvar fornecedor"
+- "Compra aprovada com sucesso"
+- "Não é possível reduzir o estoque abaixo de zero"
+- "Preenchimento obrigatório"
+
+==================================================
+VALIDAÇÕES E ERROS
+==================================================
+
+Todas as validações devem ser exibidas em português claro:
+
+- Campos obrigatórios
+- Formato inválido de e-mail
+- CNPJ inválido
+- Quantidade inválida
+- Preço inválido
+- Data inválida
+
+==================================================
+PDFs E DOCUMENTOS GERADOS
+==================================================
+
+Todos os PDFs (cotações, compras, relatórios) devem estar em português completo:
+
+- títulos
+- tabelas
+- descrições
+- campos
+- cabeçalhos
+- rodapés
+
+Nenhum texto em inglês deve aparecer nos documentos gerados.
+
+==================================================
+FORMATAÇÃO PROFISSIONAL DA LINGUAGEM
+==================================================
+
+O português deve ser:
+- profissional
+- corporativo
+- claro
+- objetivo
+- adequado para ambiente industrial
+
+Evitar gírias ou linguagem informal.
+
+==================================================
+GARANTIA DE CONSISTÊNCIA
+==================================================
+
+- Não pode existir mistura de idiomas
+- Não pode existir termos técnicos em inglês sem tradução
+- Não pode existir placeholders em inglês visíveis ao usuário
+- Toda interface deve parecer um sistema ERP brasileiro profissional
+
+==================================================
+RESULTADO ESPERADO
+==================================================
+
+O sistema MATERION deve parecer um software corporativo brasileiro nativo, totalmente localizado em português, pronto para uso em ambiente industrial real.
+
+Atualize o sistema MATERION com as correções, melhorias e novos módulos abaixo. Esta é uma atualização crítica de UX, lógica de negócio e infraestrutura funcional.
+
+==================================================
+1. CORREÇÃO CRÍTICA DE TEMA (LIGHT + DARK + CORES)
+==================================================
+
+Corrigir o sistema de temas.
+
+PROBLEMA ATUAL:
+- As cores de tema (ex: roxo, verde, vermelho) só funcionam corretamente no modo DARK.
+- No modo LIGHT as cores não são aplicadas corretamente.
+
+SOLUÇÃO OBRIGATÓRIA:
+- O sistema de tema deve funcionar de forma GLOBAL, independente de DARK ou LIGHT.
+- As cores devem ser aplicadas tanto no modo claro quanto no escuro.
+
+REGRAS:
+- Cada tema deve ter versão LIGHT e DARK consistente.
+- Não pode haver quebra de contraste.
+- O sistema deve garantir legibilidade automática do texto.
+
+==================================================
+2. NOVO SISTEMA DE PERFIL DE USUÁRIO
+==================================================
+
+Criar área completa de perfil do usuário contendo:
+
+- Nome do usuário
+- Foto de perfil
+- Cargo (opcional)
+- E-mail
+- Telefone (opcional)
+- Preferências do sistema
+- Tema padrão do usuário
+
+IMPORTANTE:
+- Todos os dados antigos de perfil devem ser LIMPOS (reset total)
+- O usuário deve começar do zero com novo sistema de perfil
+
+==================================================
+3. LIMPEZA TOTAL DE DADOS (RESET DO SISTEMA)
+==================================================
+
+Executar limpeza completa de:
+
+- fornecedores
+- compras
+- materiais
+- histórico
+- registros antigos
+- dados de teste
+
+RESULTADO:
+- sistema deve ficar vazio
+- pronto para uso real em produção
+- sem dados fictícios ou antigos
+
+==================================================
+4. SISTEMA DE ALERTA DE ESTOQUE
+==================================================
+
+Implementar alertas automáticos por item:
+
+Cada material deve ter:
+- estoque mínimo configurável
+- nível de alerta personalizado (ex: crítico, baixo, médio)
+
+REGRAS:
+- quando quantidade atingir nível definido → gerar alerta automático
+- alertas devem aparecer no dashboard
+- alertas devem aparecer em notificações
+- alertas devem ser registrados no histórico
+
+==================================================
+5. CADASTRO AUTOMÁTICO DE MATERIAL
+==================================================
+
+Quando um novo item for criado:
+
+- o sistema deve automaticamente gerar o cadastro completo do material
+- já salvar estrutura base com:
+  - setor
+  - categoria
+  - subcategoria
+  - unidade de medida
+  - histórico inicial
+  - alerta de estoque padrão
+
+==================================================
+6. NOVAS UNIDADES DE MEDIDA
+==================================================
+
+Adicionar e padronizar unidades de medida:
+
+- MT (metro)
+- UND (unidade)
+- QNT (quantidade genérica)
+- CX (caixa)
+- PCT (pacote)
+- KG (quilo)
+- G (grama)
+- L (litro)
+- ML (mililitro)
+- PAR (par)
+- ROLO
+- BARRA
+- KIT
+- FOLHA
+- TON (tonelada)
+
+Permitir criação de novas unidades personalizadas.
+
+==================================================
+7. CADASTRO DE FORNECEDORES VIA CNPJ (API)
+==================================================
+
+Implementar integração com API de consulta de CNPJ.
+
+FUNCIONALIDADE:
+- usuário digita CNPJ
+- sistema busca automaticamente:
+  - razão social
+  - nome fantasia
+  - endereço
+  - situação cadastral
+  - atividade principal
+  - contatos disponíveis (se houver)
+
+REGRAS:
+- preencher automaticamente o cadastro do fornecedor
+- permitir edição manual após preenchimento
+
+==================================================
+8. MELHORIA DE ORDEM DE COMPRA / ORÇAMENTO
+==================================================
+
+Renomear “pedido de orçamento” para:
+
+➡ ORDEM DE COTAÇÃO E COMPRA (OCC)
+
+FUNCIONALIDADE:
+- escolher qual CNPJ da empresa será usado na emissão
+- incluir múltiplos CNPJs da empresa
+- geração de PDF profissional
+
+==================================================
+9. GESTÃO COMPLETA DE COMPRA
+==================================================
+
+Ao registrar uma compra, o sistema deve permitir:
+
+- upload do PDF da ordem
+- vincular materiais comprados
+- selecionar fornecedor
+- selecionar CNPJ faturado
+- valor total
+- número de parcelas (DDL)
+- status detalhado:
+
+  - Cotação
+  - Aprovado
+  - Comprado
+  - Faturado
+  - Em produção
+  - Em rota
+  - Recebido
+  - Finalizado
+
+- prazo de entrega
+- observações
+
+==================================================
+10. DASHBOARD MELHORADO (POPUP DE TEMA)
+==================================================
+
+No dashboard:
+
+Adicionar botão de tema com ícone de:
+- lua
+- sol
+
+Ao clicar deve abrir POPUP contendo:
+
+PARTE 1:
+- toggle dark / light
+
+PARTE 2:
+- seleção de temas:
+
+  - Roxo
+  - Verde
+  - Vermelho escuro
+  - Galáxia (tema especial com estilo espacial)
+  - Laranja escuro
+  - Modo Berserk (tema agressivo com cores vermelhas/pretas estilo anime)
+  - Modo Black Clover (tema inspirado em verde/preto/dourado estilo anime)
+
+REQUISITOS:
+- transição suave
+- preview ao vivo do tema
+- salvar preferência por usuário
+
+==================================================
+11. NOVO MÓDULO: LISTA DE COTAÇÃO E COMPRA
+==================================================
+
+Criar módulo separado chamado:
+
+➡ "Demandas de Compras"
+
+FUNCIONALIDADE:
+- usuário registra materiais que precisam ser comprados
+- cada item contém:
+  - nome
+  - quantidade estimada
+  - prioridade
+  - setor
+  - observações
+  - data de necessidade
+
+Este módulo alimenta:
+- cotações
+- ordens de compra
+- planejamento de estoque
+
+==================================================
+12. LOCALIZAÇÃO COMPLETA EM PORTUGUÊS BR
+==================================================
+
+O sistema inteiro deve ser:
+
+- 100% em português brasileiro
+- sem nenhum termo em inglês visível ao usuário
+- mensagens, botões, menus, dashboards, PDFs e relatórios totalmente traduzidos
+- linguagem corporativa e profissional
+
+==================================================
+13. LIMPEZA GERAL DO SISTEMA
+==================================================
+
+- remover todos os dados antigos
+- resetar banco para estado limpo
+- manter apenas estrutura
+- sistema deve iniciar como novo ambiente corporativo
+
+==================================================
+14. OBJETIVO FINAL
+==================================================
+
+O sistema deve se tornar:
+
+- um ERP de compras industrial completo
+- altamente profissional
+- pronto para uso real em fábrica
+- organizado
+- escalável
+- com UX moderna e fluida
+
+
+Update the existing Base44 application “MATERION” with the following critical fixes, enhancements, and new modules.
+
+The OUTPUT (UI, labels, messages, dashboards, PDFs, fields, and all user-facing content) MUST remain 100% in Brazilian Portuguese.
+
+Only system-level instructions are in English. All generated application content must be in Portuguese (pt-BR).
+
+==================================================
+1. CRITICAL THEME SYSTEM FIX (LIGHT + DARK + ACCENT COLORS)
+==================================================
+
+Fix the theme system architecture.
+
+CURRENT ISSUE:
+- Accent colors (purple, green, red, etc.) only apply correctly in DARK mode.
+- LIGHT mode does not properly apply accent themes.
+
+REQUIRED FIX:
+- Themes MUST be globally consistent across LIGHT and DARK modes.
+- Each accent color must have:
+  - Light variant
+  - Dark variant
+- The system must dynamically adjust contrast automatically.
+
+RULES:
+- Text readability must ALWAYS be preserved.
+- No theme may break UI visibility.
+- Color tokens must be centralized and theme-driven.
+
+==================================================
+2. USER PROFILE MODULE (FULL RESET + REBUILD)
+==================================================
+
+Create a complete user profile system:
+
+Fields:
+- Nome completo
+- Foto de perfil
+- E-mail
+- Telefone (opcional)
+- Cargo (opcional)
+- Preferências de tema
+- Tema padrão
+
+IMPORTANT:
+- Reset all existing profile data
+- Start with a clean structure (no legacy data)
+
+==================================================
+3. FULL SYSTEM DATA RESET
+==================================================
+
+Perform a complete data wipe of:
+
+- suppliers
+- purchases
+- materials
+- inventory history
+- audit logs (except structure)
+- test data
+
+RESULT:
+- System must start EMPTY and production-ready
+- No mock or seed data
+
+==================================================
+4. STOCK ALERT SYSTEM (CRITICAL FEATURE)
+==================================================
+
+Each material must support:
+
+- minimum stock threshold
+- custom alert threshold
+- critical level definition
+
+RULES:
+- When stock reaches threshold → trigger automatic alert
+- Alerts must appear in:
+  - dashboard
+  - notifications panel
+  - audit log
+
+Alert types:
+- Baixo estoque
+- Estoque crítico
+- Reposição necessária
+
+==================================================
+5. MATERIAL CREATION AUTO-REGISTRATION
+==================================================
+
+When a new material is created:
+
+System must automatically:
+- create full material record
+- assign default structure:
+  - sector
+  - category
+  - subcategory
+  - unit of measure
+  - initial stock history entry
+  - default alert thresholds
+
+==================================================
+6. EXPANDED UNITS OF MEASURE
+==================================================
+
+Add standardized and extensible units:
+
+- MT (metro)
+- UND (unidade)
+- QNT (quantidade)
+- CX (caixa)
+- PCT (pacote)
+- KG (quilo)
+- G (grama)
+- L (litro)
+- ML (mililitro)
+- PAR (par)
+- ROLO
+- BARRA
+- KIT
+- FOLHA
+- TON (tonelada)
+
+Allow custom unit creation per user.
+
+==================================================
+7. SUPPLIER REGISTRATION VIA CNPJ API
+==================================================
+
+Integrate a CNPJ lookup API.
+
+FUNCTION:
+- User enters CNPJ
+- System auto-fills supplier data:
+  - razão social
+  - nome fantasia
+  - address
+  - status
+  - main activity
+  - additional data when available
+
+RULES:
+- User can edit after auto-fill
+- Data must be validated before saving
+
+==================================================
+8. PURCHASE DOCUMENTATION IMPROVEMENT
+==================================================
+
+Rename "quotation request" module to:
+
+➡ OCC (Ordem de Cotação e Compra)
+
+FEATURES:
+- select which company CNPJ will be used
+- support multiple company CNPJs
+- generate professional PDF in Portuguese
+
+==================================================
+9. FULL PURCHASE MANAGEMENT FLOW
+==================================================
+
+Each purchase must support:
+
+- PDF upload (order documents)
+- linked materials
+- supplier selection
+- company CNPJ selection
+- total value
+- installment/payment terms (DDL)
+- detailed status flow:
+
+  - Cotação
+  - Aprovado
+  - Comprado
+  - Faturado
+  - Em produção
+  - Em rota
+  - Recebido
+  - Finalizado
+
+- delivery tracking
+- notes and comments
+
+==================================================
+10. DASHBOARD UX IMPROVEMENT (THEME POPUP SYSTEM)
+==================================================
+
+Replace theme switch with a POPUP modal triggered by a button (sun/moon icon).
+
+Inside popup:
+
+PART 1:
+- toggle Light / Dark mode
+
+PART 2:
+Theme selection:
+- Roxo
+- Verde
+- Vermelho Escuro
+- Galáxia (space-themed)
+- Laranja Escuro
+- Modo Berserk (anime-inspired red/black aggressive theme)
+- Modo Black Clover (green/black/gold anime-inspired theme)
+
+REQUIREMENTS:
+- live preview
+- smooth transitions
+- save preference per user
+
+==================================================
+11. NEW MODULE: PURCHASE DEMAND LIST
+==================================================
+
+Create module:
+
+➡ "Demandas de Compra"
+
+Purpose:
+- register items that need to be purchased
+
+Fields:
+- material name
+- estimated quantity
+- priority level
+- sector
+- notes
+- required date
+
+This module feeds:
+- quotations
+- purchase orders
+- stock planning
+
+==================================================
+12. FULL BRAZILIAN PORTUGUESE LOCALIZATION
+==================================================
+
+All user-facing content must be:
+- 100% Brazilian Portuguese
+- no English visible in UI
+- no mixed language
+- professional industrial terminology
+
+Includes:
+- UI labels
+- buttons
+- forms
+- messages
+- validation errors
+- PDFs
+- reports
+- dashboards
+
+==================================================
+13. SYSTEM CLEAN RESET
+==================================================
+
+Ensure full system reset:
+
+- remove all previous data
+- keep only structure
+- initialize as clean production system
+
+==================================================
+14. FINAL SYSTEM GOAL
+==================================================
+
+The final application must behave like:
+
+- a full industrial ERP for purchasing
+- modern SaaS-grade interface
+- highly scalable system
+- production-ready for factories
+- clean, fast, and intuitive UX
+
+Enhance the existing Base44 application “MATERION” focusing EXCLUSIVELY on UI/UX, visual design system, and interaction behavior.
+
+The system is already functional. This update is purely for making the interface significantly more modern, polished, and enterprise-grade.
+
+All user-facing content MUST remain in Brazilian Portuguese (pt-BR).
+
+==================================================
+1. GLOBAL UI/UX REDESIGN (ENTERPRISE STANDARD)
+==================================================
+
+Upgrade the entire visual system to a modern industrial SaaS standard.
+
+The UI must feel like a premium ERP used in factories and corporate environments.
+
+Core principles:
+- clarity first
+- hierarchy of information
+- consistent spacing system
+- strong visual structure
+- minimal clutter
+- high readability in all themes
+
+==================================================
+2. CARD DESIGN SYSTEM (CRITICAL IMPROVEMENT)
+==================================================
+
+All cards (dashboards, tables, forms, widgets) must be redesigned with:
+
+- subtle borders (theme-aware)
+- soft elevation (shadow hierarchy)
+- rounded corners (consistent radius system)
+- hover elevation effect
+- smooth transitions on interaction
+
+IMPORTANT REQUIREMENT:
+- Every card MUST have a visible border outline
+- Border color must dynamically adapt to:
+  - light mode
+  - dark mode
+  - selected theme color
+
+Example behavior:
+- In purple theme → borders subtly tinted purple
+- In green theme → borders subtly tinted green
+- In dark mode → slightly brighter border contrast
+- In light mode → subtle gray tinted border
+
+==================================================
+3. TABLE UX IMPROVEMENTS
+==================================================
+
+Tables must be redesigned with:
+
+- row hover highlight effect
+- selected row highlight state
+- subtle separators between rows
+- sticky header
+- improved spacing between columns
+- quick action buttons on hover
+- zebra striping adapted to theme
+
+==================================================
+4. CHART INTERACTION ENHANCEMENT (CRITICAL)
+==================================================
+
+Improve all charts (bar, line, pie, etc.) with advanced interaction behavior:
+
+REQUIRED FEATURE:
+When the user hovers the mouse over any chart element:
+
+- The hovered segment/bar/point must be visually highlighted
+- All other elements must become slightly dimmed
+- The hovered element must:
+  - increase brightness
+  - slightly scale up
+  - show tooltip with detailed data
+
+EXAMPLE BEHAVIOR:
+- If hovering a bar in a monthly spending chart:
+  - that month becomes highlighted
+  - other months fade slightly
+  - tooltip shows exact value, percentage, and comparison
+
+This behavior must apply to ALL charts in the system.
+
+==================================================
+5. THEME-DRIVEN VISUAL CONSISTENCY
+==================================================
+
+All UI elements must respond consistently to theme changes:
+
+Includes:
+- borders
+- shadows
+- buttons
+- hover states
+- active states
+- charts
+- icons
+
+RULE:
+No element should feel disconnected from the selected theme.
+
+==================================================
+6. HOVER STATES SYSTEM (GLOBAL)
+==================================================
+
+Every interactive element must have improved hover behavior:
+
+- buttons → slight elevation + glow
+- cards → border emphasis + lift effect
+- table rows → background highlight
+- icons → subtle scale or color shift
+- clickable elements → pointer + visual feedback
+
+Transitions must be:
+- smooth
+- fast (150–250ms)
+- consistent across entire system
+
+==================================================
+7. VISUAL HIERARCHY IMPROVEMENT
+==================================================
+
+Improve readability by enforcing:
+
+- clear distinction between titles, subtitles, and content
+- consistent font sizing scale
+- stronger contrast between primary and secondary text
+- better spacing between sections
+
+==================================================
+8. FORM DESIGN IMPROVEMENTS
+==================================================
+
+Forms must be upgraded with:
+
+- grouped sections (logical blocks)
+- improved spacing
+- inline validation with clear messages in Portuguese
+- focused field highlighting
+- better input borders (theme-aware)
+- smoother focus transitions
+
+==================================================
+9. DASHBOARD POLISH
+==================================================
+
+Dashboard must feel premium:
+
+- KPI cards must be visually balanced
+- charts must be aligned and spaced consistently
+- sections must be clearly separated
+- use subtle background differentiation per section
+- avoid visual overload
+
+==================================================
+10. ACCESSIBILITY & READABILITY
+==================================================
+
+Ensure:
+- minimum contrast compliance in all themes
+- no text becomes unreadable in any theme
+- hover states are not color-only (use scale, opacity, glow)
+- consistent font legibility across all screens
+
+==================================================
+FINAL RESULT EXPECTATION
+==================================================
+
+The system must look and feel like:
+
+- a high-end industrial SaaS ERP
+- modern fintech dashboard quality UI
+- extremely polished enterprise design system
+
+Focus:
+visual consistency + interaction quality + perceived professionalism
+
+
+
+You are a senior software architect + product engineer.
+
+You will REFACTOR and UPGRADE an existing full-stack application called “MATERION” (already generated and partially functional in Replit Agent mode).
+
+IMPORTANT:
+- Do NOT rebuild from scratch.
+- Do NOT discard existing working features.
+- You MUST analyze current implementation and improve architecture, UX, data integrity, and business rules.
+- You MUST transform it into a real enterprise-grade procurement ERP.
+
+All user-facing content MUST remain in Brazilian Portuguese (pt-BR).
+
+==================================================
+GOAL
+==================================================
+
+Turn the current system into a production-ready industrial ERP for Purchasing + Inventory Management with:
+
+- correct architecture
+- strict business rules
+- consistent UX/UI system
+- reliable data model
+- proper workflows (no superficial logic)
+- scalable structure
+
+==================================================
+1. CRITICAL FIX: THEME SYSTEM (LIGHT + DARK + COLORS)
+==================================================
+
+Fix theme implementation completely.
+
+CURRENT ISSUE TO FIX:
+- Accent colors only apply correctly in dark mode.
+
+REQUIRED SOLUTION:
+- Theme system must be token-based and global
+- Every theme must support BOTH:
+  - Light mode variant
+  - Dark mode variant
+- No UI element may break contrast in any theme
+
+RULES:
+- Centralized theme tokens (colors, borders, background, text)
+- Automatic contrast adjustment for readability
+- Consistent styling across all modules
+
+EXPECTED RESULT:
+A professional SaaS-grade theme system like modern ERP platforms.
+
+==================================================
+2. UX/UI SYSTEM OVERHAUL (ENTERPRISE LEVEL)
+==================================================
+
+Improve ALL interface components:
+
+### 2.1 Cards
+- Add visible borders (theme-aware)
+- Soft shadows (not exaggerated)
+- Hover lift effect
+- Smooth transitions (150–250ms)
+- Consistent spacing system (8px grid)
+
+### 2.2 Tables
+- Row hover highlight
+- Selected row state
+- Sticky header
+- Better spacing
+- Quick actions on hover
+- Theme-aware borders
+
+### 2.3 Forms
+- Grouped fields
+- Inline validation in Portuguese
+- Focus highlight state
+- Multi-step forms for complex flows (Purchases, OCC)
+
+### 2.4 Dashboard
+- Clean KPI cards
+- Proper spacing hierarchy
+- No visual clutter
+- Clear separation of sections
+
+==================================================
+3. CRITICAL UX FEATURE: CHART INTERACTION
+==================================================
+
+Fix and upgrade ALL charts:
+
+WHEN USER HOVERS ANY DATA POINT:
+- That element must be highlighted
+- Other elements must fade slightly
+- Tooltip must show:
+  - value
+  - percentage (if applicable)
+  - comparison when possible
+
+Applies to:
+- bar charts
+- line charts
+- pie charts
+- dashboards charts
+
+==================================================
+4. DATA RESET AND CLEANUP
+==================================================
+
+Perform a controlled reset of:
+
+- suppliers (keep schema, remove data)
+- purchases
+- materials
+- inventory movements
+- audit logs (optional: keep structure only)
+
+RESULT:
+System must start clean and production-ready (no mock data).
+
+==================================================
+5. USER PROFILE SYSTEM (REBUILD)
+==================================================
+
+Implement full profile system:
+
+Fields:
+- nome
+- foto de perfil
+- email
+- telefone (opcional)
+- cargo (opcional)
+- preferências de tema
+
+RULE:
+- Existing broken or partial profile data must be reset
+
+==================================================
+6. STOCK ALERT SYSTEM (CRITICAL BUSINESS LOGIC)
+==================================================
+
+Each material must support:
+
+- estoque mínimo
+- nível crítico configurável
+
+SYSTEM MUST:
+- trigger alerts automatically when thresholds are reached
+- display alerts in dashboard
+- store alerts in history
+- categorize alerts:
+  - baixo estoque
+  - crítico
+  - reposição urgente
+
+==================================================
+7. MATERIAL AUTO-CREATION + CLASSIFICATION FIX
+==================================================
+
+Fix material creation flow:
+
+When creating a material:
+- system must automatically suggest:
+  - setor
+  - categoria
+  - subcategoria
+
+Based on:
+- name keywords
+- existing patterns
+
+Ensure:
+- correct hierarchy enforcement
+- no orphan materials
+- consistent classification rules
+
+==================================================
+8. UNITS OF MEASURE (EXPAND + STANDARDIZE)
+==================================================
+
+Add and normalize:
+
+MT, UND, QNT, CX, PCT, KG, G, L, ML, PAR, ROLO, BARRA, KIT, FOLHA, TON
+
+Allow custom units.
+
+==================================================
+9. SUPPLIER INTEGRATION (CNPJ API)
+==================================================
+
+Implement CNPJ lookup integration:
+
+When user enters CNPJ:
+- fetch data automatically:
+  - razão social
+  - nome fantasia
+  - endereço
+  - situação cadastral
+  - atividade principal
+
+Allow manual edit after fetch.
+
+==================================================
+10. PURCHASE FLOW RESTRUCTURE
+==================================================
+
+Standardize purchase lifecycle:
+
+Status flow:
+- Cotação
+- Aprovado
+- Comprado
+- Faturado
+- Em produção
+- Em rota
+- Recebido
+- Finalizado
+
+Each purchase must support:
+- supplier
+- materials list
+- total value
+- payment terms (DDL)
+- delivery tracking
+- PDF upload (order document)
+- company CNPJ selection
+
+==================================================
+11. OCC MODULE (RENAME + IMPROVE)
+==================================================
+
+Rename:
+“quotation request” → “OCC (Ordem de Cotação e Compra)”
+
+Must support:
+- multiple company CNPJs
+- professional PDF generation
+- supplier targeting
+- full history tracking
+
+==================================================
+12. NEW MODULE: PURCHASE DEMANDS
+==================================================
+
+Create:
+“Demandas de Compra”
+
+Fields:
+- material
+- quantity
+- priority
+- sector
+- notes
+- required date
+
+Purpose:
+- planning layer for procurement
+- feeds OCC and purchases
+
+==================================================
+13. MULTI-CNPJ COMPANY SUPPORT
+==================================================
+
+System must allow:
+- selecting which company CNPJ is used per purchase/OCC
+- storing multiple CNPJs for the company
+
+==================================================
+14. AUDIT SYSTEM IMPROVEMENT
+==================================================
+
+Every change must log:
+- user
+- action
+- timestamp
+- old value
+- new value
+
+Must be immutable.
+
+==================================================
+15. FULL PORTUGUESE LOCALIZATION
+==================================================
+
+Ensure:
+- 100% pt-BR UI
+- no English visible anywhere
+- professional industrial terminology
+
+Includes:
+- buttons
+- labels
+- messages
+- errors
+- PDFs
+- dashboards
+
+==================================================
+16. FINAL EXPECTATION
+==================================================
+
+The system must become:
+
+- a real industrial ERP for purchasing
+- production-ready
+- scalable architecture
+- consistent UX/UI system
+- reliable business logic
+- not a prototype
+
+Prioritize:
+1. data integrity
+2. business rules
+3. UX consistency
+4. performance
+5. visual polish
+
+You are a senior UI/UX engineer and frontend architect.
+
+Update the existing MATERION application focusing ONLY on visual design system, theme system enhancement, and UI/UX polish.
+
+All user-facing content MUST remain in Brazilian Portuguese (pt-BR).
+
+Do NOT remove features. Only improve visual quality, theme consistency, and interaction design.
+
+==================================================
+1. CRITICAL THEME COLOR FIX (DARKER + MORE PREMIUM)
+==================================================
+
+CURRENT ISSUE:
+- Theme colors (azul, roxo, verde, vermelho, laranja) are too light, washed out, and visually weak.
+
+REQUIRED FIX:
+- Redesign all theme palettes to be:
+  - deeper
+  - more saturated
+  - more premium
+  - more contrast-rich
+
+Each theme MUST have a strong identity.
+
+### Required behavior:
+- Dark mode → deep rich tones (premium SaaS feel)
+- Light mode → controlled softer tones but still saturated enough to feel alive
+
+==================================================
+2. THEME COLOR TOKENS (MANDATORY RESTRUCTURE)
+==================================================
+
+Implement a proper design token system:
+
+Each theme must define:
+- primary color (strong)
+- secondary color (support)
+- accent color (highlight)
+- border color (visible, themed)
+- hover color
+- active color
+- background tint
+
+RULE:
+No UI element should use raw static colors. Everything must be token-driven.
+
+==================================================
+3. BORDER SYSTEM (CRITICAL VISUAL UPGRADE)
+==================================================
+
+CURRENT ISSUE:
+- UI elements (cards, tables, inputs) lack visible themed borders.
+
+REQUIRED FIX:
+EVERY UI ELEMENT MUST HAVE BORDERS.
+
+### Apply to:
+- cards
+- tables
+- input fields
+- modals
+- dropdowns
+- panels
+
+### Border rules:
+- Borders must adapt to theme color
+- Borders must be slightly darker than background
+- Borders must become more visible on hover
+
+EXAMPLE BEHAVIOR:
+- Purple theme → subtle purple outline around every card
+- Green theme → subtle green outline
+- Blue theme → deep blue border accent
+
+==================================================
+4. HOVER + INTERACTION SYSTEM (GLOBAL UPGRADE)
+==================================================
+
+Improve all interactive elements:
+
+### Buttons:
+- hover glow based on theme color
+- slight scale up (1.02–1.04)
+- shadow intensifies on hover
+
+### Cards:
+- lift effect on hover
+- border becomes more visible
+- subtle glow appears
+
+### Inputs:
+- focused state must show themed border glow
+- smooth transition
+
+### Tables:
+- row hover highlight using theme tint
+- active row gets stronger border highlight
+
+==================================================
+5. UI LAYER DEPTH SYSTEM
+==================================================
+
+Introduce visual hierarchy using depth:
+
+- Background: neutral base
+- Panels: slight tint of theme
+- Cards: stronger structure with borders
+- Active elements: full theme saturation
+
+Goal:
+Make UI feel like a premium ERP SaaS (NOT flat design).
+
+==================================================
+6. CHART VISUAL ENHANCEMENT (THEME-AWARE)
+==================================================
+
+Charts must be improved:
+
+- chart colors must follow active theme palette
+- hovered element must:
+  - become brighter
+  - slightly enlarge
+  - stand out strongly
+- non-hovered elements must dim slightly
+
+Tooltips must:
+- match theme color
+- have subtle border glow
+- be visually premium
+
+==================================================
+7. GLOBAL VISUAL POLISH (UX IMPROVEMENT)
+==================================================
+
+Apply improvements:
+
+- better spacing rhythm (8px grid strictly enforced)
+- improved padding inside cards and tables
+- consistent radius system (not random rounding)
+- smoother transitions everywhere (150–250ms)
+- remove flat/boring UI surfaces
+
+==================================================
+8. THEME CONSISTENCY RULES
+==================================================
+
+Every theme must affect:
+
+- borders
+- buttons
+- highlights
+- charts
+- active states
+- hover states
+- focus states
+
+RULE:
+No element should look "neutral" unless intentionally background-only.
+
+==================================================
+9. DARK MODE IMPROVEMENT
+==================================================
+
+Dark mode must feel:
+- premium
+- deep
+- not gray/washed out
+
+Use:
+- darker backgrounds
+- stronger contrast borders
+- subtle glow accents
+- reduced pure black usage
+
+==================================================
+10. FINAL RESULT EXPECTATION
+==================================================
+
+The system must look like:
+
+- a high-end industrial SaaS ERP
+- modern fintech-grade dashboard UI
+- consistent theme-driven design system
+- visually rich but still professional
+
+Priority order:
+1. theme strength (colors must feel powerful)
+2. border system consistency
+3. hover/interaction quality
+4. visual hierarchy
+5. overall polish
+
+You are a senior full-stack engineer working on the existing MATERION ERP system in Replit.
+
+Your task is to FIX and UPGRADE the following features WITHOUT breaking existing functionality.
+
+All user-facing content MUST remain in Brazilian Portuguese (pt-BR).
+
+==================================================
+1. MATERIALS MODULE (CRITICAL UPGRADE)
+==================================================
+
+Improve the "Cadastro de Materiais" feature.
+
+### REQUIRED NEW STRUCTURE:
+
+When creating or editing a material, the system must allow:
+
+#### 1.1 Core Material Fields
+- Nome do material
+- Código interno (auto or manual)
+- Setor
+- Categoria
+- Subcategoria
+- Unidade de medida
+- Estoque atual
+- Estoque mínimo
+- Estoque máximo
+
+#### 1.2 Observações (ENHANCED)
+- Add a rich observation field
+- Must support:
+  - free text notes
+  - operational comments
+  - usage notes
+  - maintenance notes
+- Must display timestamp and user when possible
+
+#### 1.3 IMAGES (REQUIRED FIX)
+- Allow upload of multiple photos per material
+- Images must be:
+  - previewable
+  - deletable
+  - ordered
+- Must support drag-and-drop upload
+
+==================================================
+2. SUPPLIER LINKING INSIDE MATERIAL CREATION (CRITICAL FEATURE)
+==================================================
+
+When creating a material, the system MUST allow linking suppliers directly.
+
+### REQUIRED FUNCTIONALITY:
+
+Add a section called:
+
+➡ "Fornecedores deste Material"
+
+Inside this section:
+
+- Allow searching existing suppliers
+- Allow selecting multiple suppliers per material
+- Allow adding new supplier inline (quick create modal)
+- For each supplier linked, store:
+  - preço praticado (optional)
+  - prazo médio de entrega (optional)
+  - observação específica deste fornecedor para este material
+
+### EXAMPLE:
+
+Material: "Tubo Inox A304"
+
+Fornecedores:
+- Fornecedor A → R$ 10,00 | entrega 7 dias | observação: melhor preço
+- Fornecedor B → R$ 11,20 | entrega 3 dias | observação: entrega rápida
+
+### BUSINESS RULE:
+A material can have multiple suppliers.
+A supplier can supply multiple materials.
+
+==================================================
+3. MATERIAL AUTO-CREATION IMPROVEMENT
+==================================================
+
+When a material is created:
+
+System must automatically:
+- create full record
+- initialize empty supplier list
+- initialize empty image gallery
+- initialize default stock log entry
+- register creation in audit log
+
+==================================================
+4. CNPJ API FIX (BROKEN INTEGRATION)
+==================================================
+
+The current CNPJ lookup integration is NOT working.
+
+### REQUIRED FIX:
+
+- Diagnose and repair API integration
+- Ensure fallback mechanism if API fails
+- Add loading states and error handling
+
+### REQUIRED BEHAVIOR:
+
+When user enters CNPJ:
+- show loading indicator
+- fetch company data
+- auto-fill:
+  - razão social
+  - nome fantasia
+  - endereço
+  - situação cadastral
+
+### FALLBACK RULE:
+If API fails:
+- show manual form (do NOT block user)
+- show message: "Não foi possível buscar automaticamente. Preencha manualmente."
+
+### IMPORTANT:
+System must never break the supplier creation flow due to API failure.
+
+==================================================
+5. OCC PDF GENERATION FIX (CRITICAL BUG)
+==================================================
+
+The OCC PDF generation is currently NOT working.
+
+### REQUIRED FIX:
+
+- Repair PDF generation system
+- Ensure PDF is downloadable
+- Ensure PDF contains correct data
+
+### PDF MUST INCLUDE:
+
+- Company header (MATERION)
+- OCC number
+- Supplier data
+- Company CNPJ selected
+- Item list:
+  - material name
+  - quantity
+  - unit price
+  - total price
+- Observations
+- Date of creation
+
+### REQUIRED QUALITY:
+- professional layout
+- aligned table formatting
+- readable typography
+- consistent spacing
+
+### TECHNICAL REQUIREMENT:
+- Ensure PDF generation library is correctly installed and imported
+- Ensure no runtime errors during generation
+- Ensure export works from OCC detail page
+
+==================================================
+6. DATA INTEGRITY RULES
+==================================================
+
+- Materials must always support multiple suppliers
+- Suppliers must be reusable across materials
+- Images must not break material saving
+- PDF generation must not block OCC flow
+- CNPJ failure must not block supplier creation
+
+==================================================
+7. UX REQUIREMENTS
+==================================================
+
+- Supplier selection must be fast and searchable
+- Material form must be clean and grouped:
+  - Basic info
+  - Stock info
+  - Suppliers
+  - Images
+  - Observations
+- Inline creation of supplier must not navigate away
+- All actions must have clear success/error feedback in Portuguese
+
+==================================================
+8. FINAL EXPECTATION
+==================================================
+
+After this update, the system must:
+
+- Allow full material creation with suppliers + images + notes
+- Have working CNPJ auto-fill (with fallback)
+- Generate correct OCC PDFs without errors
+- Maintain full system stability
+
+This is a production-critical fix.
+
+You are now entering SYSTEM HARDENING mode for the MATERION ERP.
+
+DO NOT add random new features.
+
+Your goal is to transform the current generated system into a stable, scalable, and maintainable production-grade ERP.
+
+Focus on:
+- architecture consistency
+- component standardization
+- performance
+- maintainability
+- UX consistency
+- code cleanup
+- reusable patterns
+- eliminating duplicated logic
+
+==================================================
+1. COMPONENT STANDARDIZATION
+==================================================
+
+Audit all UI components and standardize:
+
+- spacing
+- borders
+- shadows
+- hover states
+- typography
+- table layouts
+- modal behavior
+- form layouts
+
+Create reusable shared components whenever duplication exists.
+
+==================================================
+2. DESIGN SYSTEM CONSOLIDATION
+==================================================
+
+Centralize:
+- theme tokens
+- spacing tokens
+- border radius
+- shadow system
+- transition timing
+- typography scale
+
+Ensure every screen follows the same design language.
+
+==================================================
+3. PERFORMANCE OPTIMIZATION
+==================================================
+
+Optimize:
+- unnecessary rerenders
+- duplicated requests
+- oversized state updates
+- expensive table rendering
+- chart rendering
+
+Add:
+- memoization where appropriate
+- lazy loading for heavy pages
+- loading skeletons
+- proper caching
+
+==================================================
+4. FORM SYSTEM STANDARDIZATION
+==================================================
+
+Standardize all forms:
+- same validation style
+- same spacing
+- same error presentation
+- same loading behavior
+- same success feedback
+
+==================================================
+5. TABLE SYSTEM STANDARDIZATION
+==================================================
+
+All tables must share:
+- hover behavior
+- spacing
+- action buttons
+- pagination behavior
+- empty states
+- loading states
+
+==================================================
+6. BUSINESS RULE CONSISTENCY
+==================================================
+
+Audit all purchasing and inventory rules.
+
+Ensure:
+- stock updates are deterministic
+- OCC status transitions are valid
+- purchases cannot enter invalid states
+- supplier-material relationships remain consistent
+
+==================================================
+7. ERROR HANDLING
+==================================================
+
+Improve global error handling:
+- graceful API failures
+- retry behavior where appropriate
+- user-friendly Portuguese messages
+- fallback states
+
+==================================================
+8. AUDIT + LOGGING CONSISTENCY
+==================================================
+
+Ensure every critical action logs:
+- user
+- action
+- entity affected
+- old value
+- new value
+- timestamp
+
+==================================================
+9. FINAL GOAL
+==================================================
+
+The system should no longer feel AI-generated.
+
+It should feel:
+- cohesive
+- intentional
+- maintainable
+- production-grade
+- professionally engineered
+
+You are a senior ERP architect and full-stack engineer working on the MATERION system.
+
+Your task is to implement a COMPLETE OCC TEMPLATE SYSTEM for industrial purchasing workflows.
+
+DO NOT create a simple copy feature.
+
+This must behave like a professional enterprise ERP system with reusable procurement templates, intelligent defaults, duplication workflows, and PDF template support.
+
+All user-facing content MUST remain in Brazilian Portuguese (pt-BR).
+
+==================================================
+1. CREATE A NEW MODULE: OCC TEMPLATES
+==================================================
+
+Create a dedicated module called:
+
+➡ "Templates de OCC"
+
+This module must allow users to create reusable OCC models/templates.
+
+==================================================
+2. TEMPLATE TYPES
+==================================================
+
+Support TWO template modes:
+
+==================================================
+2.1 STRUCTURE TEMPLATE
+==================================================
+
+Template contains:
+- fornecedor padrão
+- CNPJ padrão da empresa
+- observações padrão
+- setor padrão
+- categoria padrão
+- prioridade padrão
+- condições de pagamento
+- prazo padrão
+- layout do PDF
+- assinatura/rodapé
+
+NO items required.
+
+Purpose:
+Reusable structure only.
+
+==================================================
+2.2 FULL TEMPLATE WITH ITEMS
+==================================================
+
+Template contains EVERYTHING above PLUS:
+
+- lista de materiais padrão
+- unidades
+- quantidades padrão
+- observações por item
+- fornecedor preferencial por item
+
+Purpose:
+Fast recurring OCC generation.
+
+==================================================
+3. NEW OCC CREATION FLOW
+==================================================
+
+When user clicks:
+
+➡ "Nova OCC"
+
+Show modal with:
+
+- Criar do zero
+- Criar a partir de template
+- Duplicar OCC existente
+
+==================================================
+4. CREATE OCC FROM TEMPLATE
+==================================================
+
+When user selects:
+➡ "Criar a partir de template"
+
+System must:
+- list all templates
+- allow search/filter
+- show preview summary
+
+After selection:
+- prefill OCC automatically
+- allow editing before saving
+
+==================================================
+5. DUPLICATE EXISTING OCC
+==================================================
+
+Add feature:
+
+➡ "Duplicar OCC"
+
+This must:
+- clone OCC structure
+- clone items
+- clone supplier
+- clone observations
+- clone company CNPJ
+- generate new OCC number automatically
+
+User can edit before saving.
+
+==================================================
+6. SAVE OCC AS TEMPLATE
+==================================================
+
+Inside OCC detail page:
+
+Add button:
+➡ "Salvar como Template"
+
+Behavior:
+- converts current OCC into reusable template
+- user chooses:
+  - template name
+  - description
+  - structure only OR full template with items
+
+==================================================
+7. TEMPLATE DATA MODEL
+==================================================
+
+Create proper database structure.
+
+==================================================
+7.1 OCC TEMPLATE
+==================================================
+
+Fields:
+- id
+- nome
+- descrição
+- fornecedorPadraoId
+- empresaCnpjId
+- setorPadraoId
+- categoriaPadraoId
+- prioridade
+- observacoesPadrao
+- condicoesPagamento
+- prazoPadrao
+- layoutPdf
+- ativo
+- criadoPor
+- criadoEm
+
+==================================================
+7.2 OCC TEMPLATE ITEMS
+==================================================
+
+Fields:
+- id
+- templateId
+- materialId
+- nomeMaterial
+- unidade
+- quantidadePadrao
+- observacao
+- fornecedorPreferencialId
+
+==================================================
+8. PDF TEMPLATE SYSTEM (CRITICAL)
+==================================================
+
+PDF generation must support templates.
+
+Each template may define:
+- logo/header style
+- footer
+- signature block
+- colors
+- observations section
+- table style
+
+==================================================
+9. OCC QUICK ACTIONS (UX IMPROVEMENT)
+==================================================
+
+Inside OCC module add quick actions:
+
+- Nova OCC
+- Usar Template
+- Duplicar OCC
+- Salvar como Template
+
+==================================================
+10. TEMPLATE FAVORITES
+==================================================
+
+Allow users to:
+- favorite templates
+- pin most-used templates
+- see recent templates
+
+==================================================
+11. TEMPLATE SEARCH + FILTER
+==================================================
+
+Add:
+- search by name
+- filter by supplier
+- filter by sector
+- filter by category
+- filter by recent usage
+
+==================================================
+12. INTELLIGENT MATERIAL SUGGESTIONS
+==================================================
+
+When creating/editing OCC items:
+
+If user types material names:
+- suggest matching materials
+- suggest previous suppliers
+- suggest previous prices
+- suggest previous OCCs using similar items
+
+==================================================
+13. PRICE HISTORY SYSTEM
+==================================================
+
+For each material:
+Store:
+- last supplier
+- last purchase price
+- average price
+- last OCC date
+
+Display this during OCC creation.
+
+==================================================
+14. RECURRENT PURCHASE OPTIMIZATION
+==================================================
+
+Templates must optimize recurring purchases.
+
+Example:
+- Tubos Cartucho
+- Rabichos Produção
+- Almoxarifado
+- Expedição
+- Micro
+
+System should make repeated purchasing extremely fast.
+
+==================================================
+15. UX/UI REQUIREMENTS
+==================================================
+
+Template UI must feel premium:
+
+- searchable cards
+- template preview
+- quick duplication
+- hover effects
+- favorite star icon
+- recent templates section
+
+==================================================
+16. BUSINESS RULES
+==================================================
+
+- Templates must NOT overwrite existing OCCs
+- OCC duplication must generate new identifiers
+- Templates can be inactive
+- User can edit template after creation
+- OCC generated from template becomes independent after creation
+
+==================================================
+17. FINAL GOAL
+==================================================
+
+The system must behave like a real enterprise procurement ERP.
+
+The OCC workflow should become:
+- reusable
+- fast
+- scalable
+- highly productive
+
+The user should rarely need to create OCCs from scratch.

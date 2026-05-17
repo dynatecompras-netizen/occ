@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Layout } from "@/components/layout";
+import { ThemeProvider } from "@/contexts/theme-context";
 import NotFound from "@/pages/not-found";
 
 import Dashboard from "@/pages/dashboard";
@@ -11,6 +12,7 @@ import OccDetail from "@/pages/occ-detail";
 import FornecedoresList from "@/pages/fornecedores";
 import MateriaisList from "@/pages/materiais";
 import TemplatesList from "@/pages/templates";
+import Cadastros from "@/pages/cadastros";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -31,6 +33,7 @@ function Router() {
         <Route path="/fornecedores" component={FornecedoresList} />
         <Route path="/materiais" component={MateriaisList} />
         <Route path="/templates" component={TemplatesList} />
+        <Route path="/cadastros" component={Cadastros} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
@@ -39,14 +42,16 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <Router />
-        </WouterRouter>
-        <Toaster />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+            <Router />
+          </WouterRouter>
+          <Toaster />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 
