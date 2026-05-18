@@ -1,0 +1,16 @@
+# Ambientes e Caches Locais
+.local/
+artifacts/
+attached_assets/
+
+# Credenciais e Segredos (Segurança!)
+.env
+.env.*
+
+# Dependências e Builders (Garantindo as que você mencionou)
+node_modules/
+lib/
+scripts/
+.agents/
+dist/
+build/
