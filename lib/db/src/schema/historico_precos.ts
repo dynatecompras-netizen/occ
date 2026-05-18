@@ -1,17 +1,18 @@
-import { pgTable, serial, timestamp, integer, numeric, text } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
-import { z } from "zod/v4";
+import { pgTable, serial, timestamp, integer, numeric, varchar } from "drizzle-orm/pg-core";
+import { materiaisTable } from "./materiais";
+import { fornecedoresTable } from "./fornecedores";
+import { occsTable } from "./occs";
 
-export const historicosPrecosTable = pgTable("historicos_precos", {
+export const precoHistoricoTable = pgTable("preco_historico", {
   id: serial("id").primaryKey(),
-  materialId: integer("material_id").notNull(),
-  fornecedorId: integer("fornecedor_id"),
-  preco: numeric("preco", { precision: 12, scale: 2 }).notNull(),
-  occId: integer("occ_id"),
-  occNumero: text("occ_numero"),
-  dataCompra: timestamp("data_compra", { withTimezone: true }).notNull().defaultNow(),
+  materialId: integer("material_id").references(() => materiaisTable.id).notNull(),
+  fornecedorId: integer("fornecedor_id").references(() => fornecedoresTable.id).notNull(),
+  occId: integer("occ_id").references(() => occsTable.id),
+  preco: numeric("preco", { precision: 12, scale: 4 }).notNull(),
+  quantidade: numeric("quantidade", { precision: 12, scale: 4 }),
+  variacao: numeric("variacao", { precision: 8, scale: 2 }),
+  criadoEm: timestamp("criado_em", { withTimezone: true }).notNull().defaultNow(),
 });
 
-export const insertHistoricoPrecoSchema = createInsertSchema(historicosPrecosTable).omit({ id: true });
-export type InsertHistoricoPreco = z.infer<typeof insertHistoricoPrecoSchema>;
-export type HistoricoPreco = typeof historicosPrecosTable.$inferSelect;
+export type PrecoHistorico = typeof precoHistoricoTable.$inferSelect;
+export type InsertPrecoHistorico = typeof precoHistoricoTable.$inferInsert;

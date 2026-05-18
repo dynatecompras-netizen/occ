@@ -1,10 +1,9 @@
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Layout } from "@/components/layout";
 import { ThemeProvider } from "@/contexts/theme-context";
-import NotFound from "@/pages/not-found";
 
 import Dashboard from "@/pages/dashboard";
 import OccsList from "@/pages/occs";
@@ -12,13 +11,15 @@ import OccDetail from "@/pages/occ-detail";
 import FornecedoresList from "@/pages/fornecedores";
 import MateriaisList from "@/pages/materiais";
 import TemplatesList from "@/pages/templates";
-import Cadastros from "@/pages/cadastros";
+import HistoricoPrecos from "@/pages/historico-precos";
+import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      retry: false,
+      retry: 1,
       refetchOnWindowFocus: false,
+      staleTime: 30_000,
     },
   },
 });
@@ -33,7 +34,7 @@ function Router() {
         <Route path="/fornecedores" component={FornecedoresList} />
         <Route path="/materiais" component={MateriaisList} />
         <Route path="/templates" component={TemplatesList} />
-        <Route path="/cadastros" component={Cadastros} />
+        <Route path="/historico-precos" component={HistoricoPrecos} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
@@ -48,7 +49,7 @@ function App() {
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
             <Router />
           </WouterRouter>
-          <Toaster />
+          <Toaster richColors position="top-right" />
         </TooltipProvider>
       </QueryClientProvider>
     </ThemeProvider>

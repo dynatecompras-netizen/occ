@@ -1,6 +1,6 @@
 import { Router, type IRouter } from "express";
 import { eq, ilike, and, desc } from "drizzle-orm";
-import { db, materiaisTable, historicosPrecosTable, fornecedoresTable } from "@workspace/db";
+import { db, materiaisTable, precoHistoricoTable, fornecedoresTable } from "@workspace/db";
 import {
   ListMateriaisQueryParams,
   GetMaterialParams,

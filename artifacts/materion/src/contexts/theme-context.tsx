@@ -1,50 +1,37 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-type Mode = "light" | "dark";
 type ColorTheme = "blue" | "green" | "purple" | "orange" | "red";
 
 interface ThemeContextType {
-  mode: Mode;
+  theme: "dark";
   colorTheme: ColorTheme;
-  setMode: (m: Mode) => void;
+  setTheme: (theme: "dark") => void;
   setColorTheme: (c: ColorTheme) => void;
-  toggleMode: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-  mode: "light",
+  theme: "dark",
   colorTheme: "blue",
-  setMode: () => {},
+  setTheme: () => {},
   setColorTheme: () => {},
-  toggleMode: () => {},
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [mode, setModeState] = useState<Mode>(() => {
-    try { return (localStorage.getItem("mat-mode") as Mode) ?? "light"; } catch { return "light"; }
-  });
   const [colorTheme, setColorThemeState] = useState<ColorTheme>(() => {
     try { return (localStorage.getItem("mat-color") as ColorTheme) ?? "blue"; } catch { return "blue"; }
   });
 
   useEffect(() => {
     const root = document.documentElement;
-    root.classList.toggle("dark", mode === "dark");
+    root.classList.add("dark");
     root.setAttribute("data-color", colorTheme);
-    try { localStorage.setItem("mat-mode", mode); } catch {}
-  }, [mode]);
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-color", colorTheme);
     try { localStorage.setItem("mat-color", colorTheme); } catch {}
   }, [colorTheme]);
 
-  function setMode(m: Mode) { setModeState(m); }
   function setColorTheme(c: ColorTheme) { setColorThemeState(c); }
-  function toggleMode() { setModeState((prev) => (prev === "light" ? "dark" : "light")); }
 
   return (
-    <ThemeContext.Provider value={{ mode, colorTheme, setMode, setColorTheme, toggleMode }}>
+    <ThemeContext.Provider value={{ theme: "dark", colorTheme, setTheme: () => {}, setColorTheme }}>
       {children}
     </ThemeContext.Provider>
   );
